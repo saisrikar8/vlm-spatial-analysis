@@ -1,0 +1,76 @@
+{
+  "development": {
+    "n": 8,
+    "color_correct": 0,
+    "color_accuracy": 0.0,
+    "valid": 8,
+    "cross_table": {
+      "grid_correct_color_correct": 0,
+      "grid_correct_color_wrong": 5,
+      "grid_wrong_color_correct": 0,
+      "grid_wrong_color_wrong": 3
+    },
+    "per_map": {
+      "4a587de011ddfe3b6677": {
+        "n": 4,
+        "color_correct": 0
+      },
+      "5258ff05e902962ceb10": {
+        "n": 4,
+        "color_correct": 0
+      }
+    }
+  },
+  "test": {
+    "n": 32,
+    "color_correct": 4,
+    "color_accuracy": 0.125,
+    "valid": 32,
+    "cross_table": {
+      "grid_correct_color_correct": 4,
+      "grid_correct_color_wrong": 20,
+      "grid_wrong_color_correct": 0,
+      "grid_wrong_color_wrong": 8
+    },
+    "per_map": {
+      "2eb6c49d98373c77ec46": {
+        "n": 4,
+        "color_correct": 1
+      },
+      "3e2766ccf29155c40d0f": {
+        "n": 4,
+        "color_correct": 1
+      },
+      "7af8529e95a2ee568f1e": {
+        "n": 4,
+        "color_correct": 1
+      },
+      "8b8219d1b92dbd59dd1e": {
+        "n": 4,
+        "color_correct": 1
+      },
+      "9340f83d554e60c854b3": {
+        "n": 4,
+        "color_correct": 0
+      },
+      "93addac79d51c6c4a569": {
+        "n": 4,
+        "color_correct": 0
+      },
+      "ac25c6f1570ac9b3f93b": {
+        "n": 4,
+        "color_correct": 0
+      },
+      "f828c198d96499081492": {
+        "n": 4,
+        "color_correct": 0
+      }
+    }
+  },
+  "notes": [
+    "Six choices: uniform random expectation 1/6. No numerical-reading or geographic claim.",
+    "Color response requires marker finding and swatch matching; cross-task association is not a causal separation.",
+    "Choices intentionally distinct; success does not establish fine color discrimination. Missing/invalid count incorrect.",
+    "Same map panel retained but canvas extended for choices; this changes presentation. Existing sources are exploratory reuse."
+  ]
+}

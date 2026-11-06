@@ -1,0 +1,6 @@
+# Data export, geographic lookup, and pilot preparation (Python 3.11).
+numpy>=1.24
+Pillow>=10.1
+netCDF4>=1.6
+pyproj>=3.6
+global-land-mask==1.0.0

@@ -1,0 +1,10 @@
+{
+  "job_id": 40944345,
+  "remote_project": "/global/scratch/users/tummalasaisrikar/vlm-spatial-analysis",
+  "remote_output": "runs/color-matching-40944345",
+  "partition": "savio3_gpu",
+  "gpu": "A40:1",
+  "manifest_sha256": "53d0c83d1ec16d0a0b94a6108968bfcffb720a60df9c49bfa6d279be11f40746",
+  "status_at_submission": "submitted",
+  "grid_job": 40939306
+}

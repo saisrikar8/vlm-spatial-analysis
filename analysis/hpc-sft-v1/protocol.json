@@ -1,0 +1,50 @@
+{
+  "experiment": "structured_sft_v1",
+  "stage": "LoRA weight adaptation of text attention; visual encoder and base weights frozen",
+  "dataset_sha256": "f1f24ab738264625d2461a7a2eab59dbd7be445c3b8930acb80d984131ab773c",
+  "sources": {
+    "train": 64,
+    "dev": 8,
+    "test": 16
+  },
+  "examples": {
+    "train": 192,
+    "dev": 24,
+    "test": 48
+  },
+  "hyperparameters": {
+    "seed": 20261102,
+    "epochs": 1,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0,
+    "microbatch": 1,
+    "gradient_accumulation": 4,
+    "lora_r": 8,
+    "lora_alpha": 16,
+    "lora_dropout": 0.0,
+    "max_pixels": 327680,
+    "max_sequence": 2048,
+    "max_grad_norm": 1.0,
+    "peft_version": "0.17.1"
+  },
+  "generation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "repetition_penalty": 1.0,
+    "max_new_tokens": 256,
+    "use_cache": true
+  },
+  "prompt": "Image 1 is the clean figure with its legend and numerical rules. Image 2 is the same figure with A/B pointer marks. A/B are at the centers of the gaps in those marks. Read the displayed colors and the written rules. Extract one reusable numerical representation, without calculating any final answers. Return only a JSON object with exactly two keys: \"values\" and \"offsets\". \"values\" has exactly keys \"A\" and \"B\". Each has exactly \"base\" (the displayed numerical value) and \"offset\" (an offset variable name). \"offsets\" maps each used variable name to a list of every permitted numerical offset value. Reuse the SAME variable name when the rules specify one shared offset. Use DIFFERENT names for separate offsets. A known offset has a one-element list. Do not include unused variables. A value means base plus its named offset. Distinct named offsets vary independently. Example of the JSON shape, with placeholders to replace: {\"values\":{\"A\":{\"base\":number,\"offset\":\"name1\"},\"B\":{\"base\":number,\"offset\":\"name2\"}},\"offsets\":{\"name1\":[numbers],\"name2\":[numbers]}}. If a shared name is used, include it only once in offsets. If unreadable, return null. Do not explain.",
+  "training": "One fixed epoch; assistant JSON tokens only; 48 optimizer updates; final checkpoint only; no dev/test model selection.",
+  "smoke": "Two train examples, development examples only; require finite gradients, changed LoRA B weights and saved adapter reload. Separate run discarded before full training.",
+  "baseline": "Disabled adapter versus saved/reloaded adapted weights, same model revision, test images, prompt, pixel budget, greedy decoding and calculator.",
+  "primary": "Held-out source A-B endpoint MAE, with unconditional validity/exactness counts, matched-valid errors, base/domain/sharing diagnostics.",
+  "exclusions": "Previously inspected six underlying fields excluded. All related renders grouped; no fields cross splits.",
+  "resource": "One A5000, bfloat16, no quantization. Gradient checkpointing and microbatch 1. Full job capped at 90 minutes.",
+  "limits": "Pilot in one synthetic readable renderer, shared/separate additive offset rules and fixed palette. Not natural visual ambiguity, OOD generalization, novelty or calibrated uncertainty.",
+  "references": [
+    "https://huggingface.co/docs/peft/en/package_reference/lora",
+    "https://huggingface.co/docs/transformers/v4.57.1/chat_templating",
+    "https://github.com/huggingface/peft/releases/tag/v0.17.1"
+  ]
+}

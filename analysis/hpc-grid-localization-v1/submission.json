@@ -1,0 +1,16 @@
+{
+  "job_id": 40939306,
+  "status_at_submission": "retry submitted",
+  "remote_project": "/global/scratch/users/tummalasaisrikar/vlm-spatial-analysis",
+  "remote_output": "runs/grid-localization-40939306",
+  "manifest_sha256": "eae224dc4eb6ad082c284f1496381a03cbc2b07600f47ebff9ebe80cc6cdfd47",
+  "partition": "savio3_gpu",
+  "qos": "a40_gpu3_normal",
+  "gpu": "A40:1",
+  "time_limit": "00:15:00",
+  "change_reason": "A40 test-only scheduling estimate earlier than A5000; existing pending job updated without duplicate submission",
+  "previous_job_id": 40936763,
+  "previous_failure": "CUDA initialization failed before inference on n0214.savio3",
+  "cpus_per_task": 8,
+  "excluded_node": "n0214.savio3"
+}

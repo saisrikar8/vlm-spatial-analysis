@@ -1,0 +1,8 @@
+# Python 3.11 recommended. Install a CUDA-enabled PyTorch on Savio.
+torch>=2.6,<3
+torchvision>=0.21,<1
+transformers==4.57.1
+accelerate>=1.0,<2
+huggingface-hub>=0.34,<1
+Pillow>=10
+numpy>=1.24

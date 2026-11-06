@@ -1,0 +1,13 @@
+{
+  "host": "hpc.brc.berkeley.edu",
+  "bundle_sha256": "9beaa52391c1fb03399435104a8fc9e00bb83c877752a0cfea10c78a2b38016d",
+  "remote_root": "/global/scratch/users/tummalasaisrikar/vlm-spatial-analysis/submissions/sft-9beaa52391c1",
+  "status": "completed_adapter_downloaded_and_locally_reproduced",
+  "smoke_job_id": "40773719",
+  "pilot_job_id": "40773765",
+  "training_sources": 64,
+  "dev_sources": 8,
+  "test_sources": 16,
+  "training_examples": 192,
+  "optimizer_updates": 48
+}

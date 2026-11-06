@@ -1,3 +1,11 @@
-ilamb_maps
-__pycache__
-.idea
+# Local datasets, environments, caches, and scheduler output
+/data/
+/.venv/
+/hf-cache/
+/tmp/
+/logs/*
+!/logs/.gitkeep
+__pycache__/
+*.py[cod]
+.idea/
+.DS_Store
