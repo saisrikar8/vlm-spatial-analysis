@@ -1,0 +1,16 @@
+{
+  "training_ids": [
+    "source00-point00-full",
+    "source00-point00-crop"
+  ],
+  "dev_ids": [
+    "source06-point00-full",
+    "source06-point00-crop"
+  ],
+  "evaluation_ids": [
+    "source06-point00-full",
+    "source06-point00-crop"
+  ],
+  "evaluated_split": "dev",
+  "checkpoint_selection": "Final epoch only; no dev/test checkpoint selection"
+}

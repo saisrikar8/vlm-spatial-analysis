@@ -1,0 +1,94 @@
+{
+  "development": {
+    "n": 8,
+    "red_correct": 0,
+    "blue_correct": 0,
+    "red_accuracy": 0.0,
+    "blue_accuracy": 0.0,
+    "red_marker_option_selected": 0,
+    "blue_marker_option_selected": 1,
+    "toward_marker_option": 1,
+    "away_from_marker_option": 0,
+    "wrong_to_correct": 0,
+    "correct_to_wrong": 0,
+    "changed_answers": 1,
+    "red_selected_red": 2,
+    "blue_selected_red": 1,
+    "per_map": {
+      "4a587de011ddfe3b6677": {
+        "n": 4,
+        "red_correct": 0,
+        "blue_correct": 0
+      },
+      "5258ff05e902962ceb10": {
+        "n": 4,
+        "red_correct": 0,
+        "blue_correct": 0
+      }
+    }
+  },
+  "test": {
+    "n": 32,
+    "red_correct": 6,
+    "blue_correct": 7,
+    "red_accuracy": 0.1875,
+    "blue_accuracy": 0.21875,
+    "red_marker_option_selected": 10,
+    "blue_marker_option_selected": 10,
+    "toward_marker_option": 1,
+    "away_from_marker_option": 1,
+    "wrong_to_correct": 1,
+    "correct_to_wrong": 0,
+    "changed_answers": 5,
+    "red_selected_red": 4,
+    "blue_selected_red": 3,
+    "per_map": {
+      "2eb6c49d98373c77ec46": {
+        "n": 4,
+        "red_correct": 1,
+        "blue_correct": 1
+      },
+      "3e2766ccf29155c40d0f": {
+        "n": 4,
+        "red_correct": 1,
+        "blue_correct": 1
+      },
+      "7af8529e95a2ee568f1e": {
+        "n": 4,
+        "red_correct": 2,
+        "blue_correct": 2
+      },
+      "8b8219d1b92dbd59dd1e": {
+        "n": 4,
+        "red_correct": 2,
+        "blue_correct": 2
+      },
+      "9340f83d554e60c854b3": {
+        "n": 4,
+        "red_correct": 0,
+        "blue_correct": 1
+      },
+      "93addac79d51c6c4a569": {
+        "n": 4,
+        "red_correct": 0,
+        "blue_correct": 0
+      },
+      "ac25c6f1570ac9b3f93b": {
+        "n": 4,
+        "red_correct": 0,
+        "blue_correct": 0
+      },
+      "f828c198d96499081492": {
+        "n": 4,
+        "red_correct": 0,
+        "blue_correct": 0
+      }
+    }
+  },
+  "notes": [
+    "Exploratory reused points, no significance claim. Common neutral prompt differs from original red-naming prompt.",
+    "Only colored ring pixels change; white border, center, swatches and positions unchanged.",
+    "Marker-choice shifts show sensitivity to marker presentation, not uniquely an internal copying mechanism.",
+    "The exact blue marker color is a non-target swatch available in BOTH images. Blue varies by point."
+  ]
+}

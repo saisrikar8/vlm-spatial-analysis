@@ -1,0 +1,8 @@
+{
+  "job_id": 40949906,
+  "status_at_submission": "submitted",
+  "remote_output": "runs/marker-available-color-40949906",
+  "remote_project": "/global/scratch/users/tummalasaisrikar/vlm-spatial-analysis",
+  "manifest_sha256": "b21575a809c628af43a809809f0b4c3577bb6527d365a74e00843f2f822409f7",
+  "calls": 80
+}

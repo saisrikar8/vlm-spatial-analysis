@@ -1,0 +1,4496 @@
+{
+  "experiment": "crop_color_matching_v1",
+  "source_manifest_sha256": "53d0c83d1ec16d0a0b94a6108968bfcffb720a60df9c49bfa6d279be11f40746",
+  "prompt": "Which numbered color swatch at the bottom best matches the underlying map color at the CENTER of the circular marker? Match the map color, not the marker outline or the gray grid lines. Return only one digit from 1 to 6. Do not read numerical map values or report the grid cell.",
+  "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 16
+  },
+  "seed": 20261106,
+  "design": "Paired full map vs 65x65 marked region resized 5x nearest-neighbor. Same 795x625 canvas and six unchanged swatches. Alternate task order.",
+  "primary": "All 32 reused test points: full vs crop color-choice accuracy; invalid/missing incorrect. Development separate.",
+  "examples": [
+    {
+      "id": "map00-point0-full",
+      "point_id": "map00-point0",
+      "condition": "full",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "3",
+      "swatches": [
+        [
+          77,
+          255,
+          170
+        ],
+        [
+          255,
+          89,
+          0
+        ],
+        [
+          0,
+          41,
+          255
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          0,
+          53,
+          87
+        ],
+        [
+          128,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        41,
+        255
+      ],
+      "source_image": "images/map00-point0.png",
+      "source_sha256": "08c8ee94213e63fb789395a03553a98ccfa4a2a5dc27837651442dabbd9f4d81",
+      "crop_box": [
+        486,
+        87,
+        551,
+        152
+      ],
+      "image": "images/map00-point0-full.png",
+      "image_sha256": "08c8ee94213e63fb789395a03553a98ccfa4a2a5dc27837651442dabbd9f4d81"
+    },
+    {
+      "id": "map00-point0-crop",
+      "point_id": "map00-point0",
+      "condition": "crop",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "3",
+      "swatches": [
+        [
+          77,
+          255,
+          170
+        ],
+        [
+          255,
+          89,
+          0
+        ],
+        [
+          0,
+          41,
+          255
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          0,
+          53,
+          87
+        ],
+        [
+          128,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        41,
+        255
+      ],
+      "source_image": "images/map00-point0.png",
+      "source_sha256": "08c8ee94213e63fb789395a03553a98ccfa4a2a5dc27837651442dabbd9f4d81",
+      "crop_box": [
+        486,
+        87,
+        551,
+        152
+      ],
+      "image": "images/map00-point0-crop.png",
+      "image_sha256": "558aa26dd90dd36f2ea2ede61ab51de6d9f7cd85d4bc3256c20130e48db4b9b0"
+    },
+    {
+      "id": "map00-point1-crop",
+      "point_id": "map00-point1",
+      "condition": "crop",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "3",
+      "swatches": [
+        [
+          1,
+          10,
+          47
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          168,
+          255
+        ],
+        [
+          255,
+          167,
+          0
+        ],
+        [
+          0,
+          0,
+          218
+        ],
+        [
+          170,
+          255,
+          77
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        168,
+        255
+      ],
+      "source_image": "images/map00-point1.png",
+      "source_sha256": "aec805efc4c5367a628c1921113c681e731abc492a66979cf4536325f250ae84",
+      "crop_box": [
+        293,
+        332,
+        358,
+        397
+      ],
+      "image": "images/map00-point1-crop.png",
+      "image_sha256": "979e4becc115923a8c7fe05937acceb5130e024c3b6f4d071b28c030a6b272e2"
+    },
+    {
+      "id": "map00-point1-full",
+      "point_id": "map00-point1",
+      "condition": "full",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "3",
+      "swatches": [
+        [
+          1,
+          10,
+          47
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          168,
+          255
+        ],
+        [
+          255,
+          167,
+          0
+        ],
+        [
+          0,
+          0,
+          218
+        ],
+        [
+          170,
+          255,
+          77
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        168,
+        255
+      ],
+      "source_image": "images/map00-point1.png",
+      "source_sha256": "aec805efc4c5367a628c1921113c681e731abc492a66979cf4536325f250ae84",
+      "crop_box": [
+        293,
+        332,
+        358,
+        397
+      ],
+      "image": "images/map00-point1-full.png",
+      "image_sha256": "aec805efc4c5367a628c1921113c681e731abc492a66979cf4536325f250ae84"
+    },
+    {
+      "id": "map00-point2-full",
+      "point_id": "map00-point2",
+      "condition": "full",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "6",
+      "swatches": [
+        [
+          0,
+          0,
+          141
+        ],
+        [
+          0,
+          229,
+          248
+        ],
+        [
+          0,
+          84,
+          255
+        ],
+        [
+          186,
+          255,
+          60
+        ],
+        [
+          255,
+          141,
+          0
+        ],
+        [
+          214,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        214,
+        0,
+        0
+      ],
+      "source_image": "images/map00-point2.png",
+      "source_sha256": "6c361d6a991e694454f4648906519e0ea557fe6469ef48a17966588830aa530a",
+      "crop_box": [
+        611,
+        242,
+        676,
+        307
+      ],
+      "image": "images/map00-point2-full.png",
+      "image_sha256": "6c361d6a991e694454f4648906519e0ea557fe6469ef48a17966588830aa530a"
+    },
+    {
+      "id": "map00-point2-crop",
+      "point_id": "map00-point2",
+      "condition": "crop",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "6",
+      "swatches": [
+        [
+          0,
+          0,
+          141
+        ],
+        [
+          0,
+          229,
+          248
+        ],
+        [
+          0,
+          84,
+          255
+        ],
+        [
+          186,
+          255,
+          60
+        ],
+        [
+          255,
+          141,
+          0
+        ],
+        [
+          214,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        214,
+        0,
+        0
+      ],
+      "source_image": "images/map00-point2.png",
+      "source_sha256": "6c361d6a991e694454f4648906519e0ea557fe6469ef48a17966588830aa530a",
+      "crop_box": [
+        611,
+        242,
+        676,
+        307
+      ],
+      "image": "images/map00-point2-crop.png",
+      "image_sha256": "f81a77fdd2910494ceccb4252fd7a551b020c209ac1814162c99ef9ec77a0f39"
+    },
+    {
+      "id": "map00-point3-crop",
+      "point_id": "map00-point3",
+      "condition": "crop",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          200,
+          255
+        ],
+        [
+          177,
+          255,
+          70
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          255,
+          159,
+          0
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          11,
+          71
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        200,
+        255
+      ],
+      "source_image": "images/map00-point3.png",
+      "source_sha256": "012af53a76c233ec942f864eb4dcd3c3346ad17a1ce67bd9b9a29daf101c5161",
+      "crop_box": [
+        535,
+        340,
+        600,
+        405
+      ],
+      "image": "images/map00-point3-crop.png",
+      "image_sha256": "b880a2b0d676da5ff223b5e0c789d62b70ea3c973c6db58330c51acd8d9f2aa4"
+    },
+    {
+      "id": "map00-point3-full",
+      "point_id": "map00-point3",
+      "condition": "full",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          200,
+          255
+        ],
+        [
+          177,
+          255,
+          70
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          255,
+          159,
+          0
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          11,
+          71
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        200,
+        255
+      ],
+      "source_image": "images/map00-point3.png",
+      "source_sha256": "012af53a76c233ec942f864eb4dcd3c3346ad17a1ce67bd9b9a29daf101c5161",
+      "crop_box": [
+        535,
+        340,
+        600,
+        405
+      ],
+      "image": "images/map00-point3-full.png",
+      "image_sha256": "012af53a76c233ec942f864eb4dcd3c3346ad17a1ce67bd9b9a29daf101c5161"
+    },
+    {
+      "id": "map01-point0-full",
+      "point_id": "map01-point0",
+      "condition": "full",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "answer": "2",
+      "swatches": [
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          0,
+          0,
+          128
+        ],
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          0,
+          97,
+          255
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          22,
+          255,
+          225
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        128
+      ],
+      "source_image": "images/map01-point0.png",
+      "source_sha256": "d767c16481f7bc1c3fd7495045f501773d994c11ce4f4238130224bedb1e4846",
+      "crop_box": [
+        236,
+        336,
+        301,
+        401
+      ],
+      "image": "images/map01-point0-full.png",
+      "image_sha256": "d767c16481f7bc1c3fd7495045f501773d994c11ce4f4238130224bedb1e4846"
+    },
+    {
+      "id": "map01-point0-crop",
+      "point_id": "map01-point0",
+      "condition": "crop",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "answer": "2",
+      "swatches": [
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          0,
+          0,
+          128
+        ],
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          0,
+          97,
+          255
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          22,
+          255,
+          225
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        128
+      ],
+      "source_image": "images/map01-point0.png",
+      "source_sha256": "d767c16481f7bc1c3fd7495045f501773d994c11ce4f4238130224bedb1e4846",
+      "crop_box": [
+        236,
+        336,
+        301,
+        401
+      ],
+      "image": "images/map01-point0-crop.png",
+      "image_sha256": "6261035bd180e8595672dffcf4019535162aef2cbf985b9f6f5862e17a5456cd"
+    },
+    {
+      "id": "map01-point1-crop",
+      "point_id": "map01-point1",
+      "condition": "crop",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "answer": "3",
+      "swatches": [
+        [
+          106,
+          255,
+          141
+        ],
+        [
+          255,
+          85,
+          0
+        ],
+        [
+          0,
+          116,
+          255
+        ],
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          122
+        ],
+        [
+          254,
+          237,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        116,
+        255
+      ],
+      "source_image": "images/map01-point1.png",
+      "source_sha256": "c3ae56a0395a9fa031bb053fc6f658e49f385370936f7764818dabd6a6d76a17",
+      "crop_box": [
+        486,
+        87,
+        551,
+        152
+      ],
+      "image": "images/map01-point1-crop.png",
+      "image_sha256": "48f7135251284103c231aa4e6d4ff345f4528608567c58852ec76a9aa2fc98cb"
+    },
+    {
+      "id": "map01-point1-full",
+      "point_id": "map01-point1",
+      "condition": "full",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "answer": "3",
+      "swatches": [
+        [
+          106,
+          255,
+          141
+        ],
+        [
+          255,
+          85,
+          0
+        ],
+        [
+          0,
+          116,
+          255
+        ],
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          122
+        ],
+        [
+          254,
+          237,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        116,
+        255
+      ],
+      "source_image": "images/map01-point1.png",
+      "source_sha256": "c3ae56a0395a9fa031bb053fc6f658e49f385370936f7764818dabd6a6d76a17",
+      "crop_box": [
+        486,
+        87,
+        551,
+        152
+      ],
+      "image": "images/map01-point1-full.png",
+      "image_sha256": "c3ae56a0395a9fa031bb053fc6f658e49f385370936f7764818dabd6a6d76a17"
+    },
+    {
+      "id": "map01-point2-full",
+      "point_id": "map01-point2",
+      "condition": "full",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          0,
+          132
+        ],
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          0,
+          100,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        132
+      ],
+      "source_image": "images/map01-point2.png",
+      "source_sha256": "6bc63b71c1b51cada9c179f6bc91f6a253c2892f2881db4b5fa5477d38a0f165",
+      "crop_box": [
+        531,
+        160,
+        596,
+        225
+      ],
+      "image": "images/map01-point2-full.png",
+      "image_sha256": "6bc63b71c1b51cada9c179f6bc91f6a253c2892f2881db4b5fa5477d38a0f165"
+    },
+    {
+      "id": "map01-point2-crop",
+      "point_id": "map01-point2",
+      "condition": "crop",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          0,
+          132
+        ],
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          0,
+          100,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        132
+      ],
+      "source_image": "images/map01-point2.png",
+      "source_sha256": "6bc63b71c1b51cada9c179f6bc91f6a253c2892f2881db4b5fa5477d38a0f165",
+      "crop_box": [
+        531,
+        160,
+        596,
+        225
+      ],
+      "image": "images/map01-point2-crop.png",
+      "image_sha256": "704d8071391ea918e6ad00acd41bfbfd5113801b03c19cc033bd2646b7c2cc18"
+    },
+    {
+      "id": "map01-point3-crop",
+      "point_id": "map01-point3",
+      "condition": "crop",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "answer": "2",
+      "swatches": [
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          0,
+          164
+        ],
+        [
+          1,
+          1,
+          14
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          191,
+          0,
+          0
+        ],
+        [
+          248,
+          245,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        164
+      ],
+      "source_image": "images/map01-point3.png",
+      "source_sha256": "f0383c1b38c9ffd888f41174b04111cbe48765689ac0df5d3e5e1f7bddac1034",
+      "crop_box": [
+        244,
+        148,
+        309,
+        213
+      ],
+      "image": "images/map01-point3-crop.png",
+      "image_sha256": "266e970e9419730be1b9387afc1265b76e61965865c314308383538b97fe8ebc"
+    },
+    {
+      "id": "map01-point3-full",
+      "point_id": "map01-point3",
+      "condition": "full",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "answer": "2",
+      "swatches": [
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          0,
+          164
+        ],
+        [
+          1,
+          1,
+          14
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          191,
+          0,
+          0
+        ],
+        [
+          248,
+          245,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        164
+      ],
+      "source_image": "images/map01-point3.png",
+      "source_sha256": "f0383c1b38c9ffd888f41174b04111cbe48765689ac0df5d3e5e1f7bddac1034",
+      "crop_box": [
+        244,
+        148,
+        309,
+        213
+      ],
+      "image": "images/map01-point3-full.png",
+      "image_sha256": "f0383c1b38c9ffd888f41174b04111cbe48765689ac0df5d3e5e1f7bddac1034"
+    },
+    {
+      "id": "map02-point0-full",
+      "point_id": "map02-point0",
+      "condition": "full",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "answer": "4",
+      "swatches": [
+        [
+          173,
+          179,
+          187
+        ],
+        [
+          24,
+          101,
+          172
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          219,
+          233,
+          246
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          81,
+          156,
+          204
+        ]
+      ],
+      "reference_rgb": [
+        219,
+        233,
+        246
+      ],
+      "source_image": "images/map02-point0.png",
+      "source_sha256": "693e599993d387de3dbefea137bd3e0387bf607832c6fe0f1cd070f91ac70561",
+      "crop_box": [
+        595,
+        250,
+        660,
+        315
+      ],
+      "image": "images/map02-point0-full.png",
+      "image_sha256": "693e599993d387de3dbefea137bd3e0387bf607832c6fe0f1cd070f91ac70561"
+    },
+    {
+      "id": "map02-point0-crop",
+      "point_id": "map02-point0",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "answer": "4",
+      "swatches": [
+        [
+          173,
+          179,
+          187
+        ],
+        [
+          24,
+          101,
+          172
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          219,
+          233,
+          246
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          81,
+          156,
+          204
+        ]
+      ],
+      "reference_rgb": [
+        219,
+        233,
+        246
+      ],
+      "source_image": "images/map02-point0.png",
+      "source_sha256": "693e599993d387de3dbefea137bd3e0387bf607832c6fe0f1cd070f91ac70561",
+      "crop_box": [
+        595,
+        250,
+        660,
+        315
+      ],
+      "image": "images/map02-point0-crop.png",
+      "image_sha256": "f1b823eeaee2191c7da3c63194590a5baf30c8bf03ad54f9e783a71bb8d27d4d"
+    },
+    {
+      "id": "map02-point1-crop",
+      "point_id": "map02-point1",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "answer": "1",
+      "swatches": [
+        [
+          216,
+          231,
+          245
+        ],
+        [
+          164,
+          172,
+          180
+        ],
+        [
+          23,
+          100,
+          171
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          79,
+          155,
+          203
+        ]
+      ],
+      "reference_rgb": [
+        216,
+        231,
+        245
+      ],
+      "source_image": "images/map02-point1.png",
+      "source_sha256": "5dc681c97844acbdbd4230493fb600887593db201ddae6492a1d0174471e9353",
+      "crop_box": [
+        466,
+        83,
+        531,
+        148
+      ],
+      "image": "images/map02-point1-crop.png",
+      "image_sha256": "225338a7ade5bb75b6834c02386d2d8b558be0ddf2af58a87cfaac344e5a2018"
+    },
+    {
+      "id": "map02-point1-full",
+      "point_id": "map02-point1",
+      "condition": "full",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "answer": "1",
+      "swatches": [
+        [
+          216,
+          231,
+          245
+        ],
+        [
+          164,
+          172,
+          180
+        ],
+        [
+          23,
+          100,
+          171
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          79,
+          155,
+          203
+        ]
+      ],
+      "reference_rgb": [
+        216,
+        231,
+        245
+      ],
+      "source_image": "images/map02-point1.png",
+      "source_sha256": "5dc681c97844acbdbd4230493fb600887593db201ddae6492a1d0174471e9353",
+      "crop_box": [
+        466,
+        83,
+        531,
+        148
+      ],
+      "image": "images/map02-point1-full.png",
+      "image_sha256": "5dc681c97844acbdbd4230493fb600887593db201ddae6492a1d0174471e9353"
+    },
+    {
+      "id": "map02-point2-full",
+      "point_id": "map02-point2",
+      "condition": "full",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "answer": "3",
+      "swatches": [
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          95,
+          166,
+          209
+        ],
+        [
+          245,
+          249,
+          254
+        ],
+        [
+          29,
+          108,
+          177
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          184,
+          194,
+          203
+        ]
+      ],
+      "reference_rgb": [
+        245,
+        249,
+        254
+      ],
+      "source_image": "images/map02-point2.png",
+      "source_sha256": "67dc4053b38b1ffab7cc1c5e735978057481d91245da8c686ab4df4027cc0645",
+      "crop_box": [
+        478,
+        324,
+        543,
+        389
+      ],
+      "image": "images/map02-point2-full.png",
+      "image_sha256": "67dc4053b38b1ffab7cc1c5e735978057481d91245da8c686ab4df4027cc0645"
+    },
+    {
+      "id": "map02-point2-crop",
+      "point_id": "map02-point2",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "answer": "3",
+      "swatches": [
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          95,
+          166,
+          209
+        ],
+        [
+          245,
+          249,
+          254
+        ],
+        [
+          29,
+          108,
+          177
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          184,
+          194,
+          203
+        ]
+      ],
+      "reference_rgb": [
+        245,
+        249,
+        254
+      ],
+      "source_image": "images/map02-point2.png",
+      "source_sha256": "67dc4053b38b1ffab7cc1c5e735978057481d91245da8c686ab4df4027cc0645",
+      "crop_box": [
+        478,
+        324,
+        543,
+        389
+      ],
+      "image": "images/map02-point2-crop.png",
+      "image_sha256": "e651cec08f2edea34f0fbfd66fe12cfc050d78bc777b586e454d938b005d5f84"
+    },
+    {
+      "id": "map02-point3-crop",
+      "point_id": "map02-point3",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "answer": "6",
+      "swatches": [
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          173,
+          179,
+          187
+        ],
+        [
+          81,
+          156,
+          204
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          24,
+          101,
+          172
+        ],
+        [
+          217,
+          232,
+          245
+        ]
+      ],
+      "reference_rgb": [
+        217,
+        232,
+        245
+      ],
+      "source_image": "images/map02-point3.png",
+      "source_sha256": "1443fbcbaeb61557471e9fa905524e85971393598457f81929fe624014ac1dd8",
+      "crop_box": [
+        216,
+        83,
+        281,
+        148
+      ],
+      "image": "images/map02-point3-crop.png",
+      "image_sha256": "437c76941fa82272f7623e05202d865bf7c82ef0972c37db8367480f33cb5499"
+    },
+    {
+      "id": "map02-point3-full",
+      "point_id": "map02-point3",
+      "condition": "full",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "answer": "6",
+      "swatches": [
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          173,
+          179,
+          187
+        ],
+        [
+          81,
+          156,
+          204
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          24,
+          101,
+          172
+        ],
+        [
+          217,
+          232,
+          245
+        ]
+      ],
+      "reference_rgb": [
+        217,
+        232,
+        245
+      ],
+      "source_image": "images/map02-point3.png",
+      "source_sha256": "1443fbcbaeb61557471e9fa905524e85971393598457f81929fe624014ac1dd8",
+      "crop_box": [
+        216,
+        83,
+        281,
+        148
+      ],
+      "image": "images/map02-point3-full.png",
+      "image_sha256": "1443fbcbaeb61557471e9fa905524e85971393598457f81929fe624014ac1dd8"
+    },
+    {
+      "id": "map03-point0-full",
+      "point_id": "map03-point0",
+      "condition": "full",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "answer": "4",
+      "swatches": [
+        [
+          23,
+          123,
+          96
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          206,
+          255,
+          41
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          255,
+          104,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        206,
+        255,
+        41
+      ],
+      "source_image": "images/map03-point0.png",
+      "source_sha256": "a81f7b4f7e8714a89aedebe97fdadcb46bad1ec14404a59011a13a3a87ff1003",
+      "crop_box": [
+        539,
+        160,
+        604,
+        225
+      ],
+      "image": "images/map03-point0-full.png",
+      "image_sha256": "a81f7b4f7e8714a89aedebe97fdadcb46bad1ec14404a59011a13a3a87ff1003"
+    },
+    {
+      "id": "map03-point0-crop",
+      "point_id": "map03-point0",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "answer": "4",
+      "swatches": [
+        [
+          23,
+          123,
+          96
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          206,
+          255,
+          41
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          255,
+          104,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        206,
+        255,
+        41
+      ],
+      "source_image": "images/map03-point0.png",
+      "source_sha256": "a81f7b4f7e8714a89aedebe97fdadcb46bad1ec14404a59011a13a3a87ff1003",
+      "crop_box": [
+        539,
+        160,
+        604,
+        225
+      ],
+      "image": "images/map03-point0-crop.png",
+      "image_sha256": "bea5c725afb2933cbdfecb7a9fcee0327fc86f2c02ecf61218a731802d82062d"
+    },
+    {
+      "id": "map03-point1-crop",
+      "point_id": "map03-point1",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "answer": "5",
+      "swatches": [
+        [
+          0,
+          11,
+          14
+        ],
+        [
+          0,
+          117,
+          150
+        ],
+        [
+          254,
+          237,
+          0
+        ],
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          83,
+          255,
+          164
+        ],
+        [
+          0,
+          0,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        83,
+        255,
+        164
+      ],
+      "source_image": "images/map03-point1.png",
+      "source_sha256": "1d2857a48b1aa6ce9318adb7cdb84cb06b8f55bb536e17886747b4b9b51023a7",
+      "crop_box": [
+        357,
+        71,
+        422,
+        136
+      ],
+      "image": "images/map03-point1-crop.png",
+      "image_sha256": "ead350753f50446c07e83dda8f3aeec2a3229b2374fb8aac611b3ce9d4404f8a"
+    },
+    {
+      "id": "map03-point1-full",
+      "point_id": "map03-point1",
+      "condition": "full",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "answer": "5",
+      "swatches": [
+        [
+          0,
+          11,
+          14
+        ],
+        [
+          0,
+          117,
+          150
+        ],
+        [
+          254,
+          237,
+          0
+        ],
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          83,
+          255,
+          164
+        ],
+        [
+          0,
+          0,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        83,
+        255,
+        164
+      ],
+      "source_image": "images/map03-point1.png",
+      "source_sha256": "1d2857a48b1aa6ce9318adb7cdb84cb06b8f55bb536e17886747b4b9b51023a7",
+      "crop_box": [
+        357,
+        71,
+        422,
+        136
+      ],
+      "image": "images/map03-point1-full.png",
+      "image_sha256": "1d2857a48b1aa6ce9318adb7cdb84cb06b8f55bb536e17886747b4b9b51023a7"
+    },
+    {
+      "id": "map03-point2-full",
+      "point_id": "map03-point2",
+      "condition": "full",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "answer": "2",
+      "swatches": [
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          190,
+          255,
+          57
+        ],
+        [
+          255,
+          111,
+          0
+        ],
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          23,
+          123,
+          96
+        ],
+        [
+          15,
+          249,
+          231
+        ]
+      ],
+      "reference_rgb": [
+        190,
+        255,
+        57
+      ],
+      "source_image": "images/map03-point2.png",
+      "source_sha256": "9bd4d4ee169f88b84fcd2f8a674500e0ae49007564056402dfaea98566a6b943",
+      "crop_box": [
+        543,
+        332,
+        608,
+        397
+      ],
+      "image": "images/map03-point2-full.png",
+      "image_sha256": "9bd4d4ee169f88b84fcd2f8a674500e0ae49007564056402dfaea98566a6b943"
+    },
+    {
+      "id": "map03-point2-crop",
+      "point_id": "map03-point2",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "answer": "2",
+      "swatches": [
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          190,
+          255,
+          57
+        ],
+        [
+          255,
+          111,
+          0
+        ],
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          23,
+          123,
+          96
+        ],
+        [
+          15,
+          249,
+          231
+        ]
+      ],
+      "reference_rgb": [
+        190,
+        255,
+        57
+      ],
+      "source_image": "images/map03-point2.png",
+      "source_sha256": "9bd4d4ee169f88b84fcd2f8a674500e0ae49007564056402dfaea98566a6b943",
+      "crop_box": [
+        543,
+        332,
+        608,
+        397
+      ],
+      "image": "images/map03-point2-crop.png",
+      "image_sha256": "671570c102a19bbc016cb8f0e6307f8a908779760e86fedb1a68a0dafcffaecc"
+    },
+    {
+      "id": "map03-point3-crop",
+      "point_id": "map03-point3",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "answer": "4",
+      "swatches": [
+        [
+          0,
+          33,
+          255
+        ],
+        [
+          0,
+          0,
+          71
+        ],
+        [
+          28,
+          150,
+          117
+        ],
+        [
+          255,
+          93,
+          0
+        ],
+        [
+          0,
+          221,
+          254
+        ],
+        [
+          148,
+          255,
+          99
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        93,
+        0
+      ],
+      "source_image": "images/map03-point3.png",
+      "source_sha256": "57eee38669cc2e7a96e5207f3cb26f2ccaa235756aeea3e2d0d283a2a608bdb2",
+      "crop_box": [
+        446,
+        226,
+        511,
+        291
+      ],
+      "image": "images/map03-point3-crop.png",
+      "image_sha256": "849df07eb8704f9ae4fcec2a7813e068ae46363039310aa29d35638d37e8de83"
+    },
+    {
+      "id": "map03-point3-full",
+      "point_id": "map03-point3",
+      "condition": "full",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "answer": "4",
+      "swatches": [
+        [
+          0,
+          33,
+          255
+        ],
+        [
+          0,
+          0,
+          71
+        ],
+        [
+          28,
+          150,
+          117
+        ],
+        [
+          255,
+          93,
+          0
+        ],
+        [
+          0,
+          221,
+          254
+        ],
+        [
+          148,
+          255,
+          99
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        93,
+        0
+      ],
+      "source_image": "images/map03-point3.png",
+      "source_sha256": "57eee38669cc2e7a96e5207f3cb26f2ccaa235756aeea3e2d0d283a2a608bdb2",
+      "crop_box": [
+        446,
+        226,
+        511,
+        291
+      ],
+      "image": "images/map03-point3-full.png",
+      "image_sha256": "57eee38669cc2e7a96e5207f3cb26f2ccaa235756aeea3e2d0d283a2a608bdb2"
+    },
+    {
+      "id": "map04-point0-full",
+      "point_id": "map04-point0",
+      "condition": "full",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "answer": "5",
+      "swatches": [
+        [
+          255,
+          159,
+          0
+        ],
+        [
+          0,
+          28,
+          57
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          177,
+          255,
+          70
+        ],
+        [
+          0,
+          197,
+          255
+        ],
+        [
+          0,
+          0,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        197,
+        255
+      ],
+      "source_image": "images/map04-point0.png",
+      "source_sha256": "68129048241c228f97aaf199e13f9f01d6014c84252208c546affffb60e13335",
+      "crop_box": [
+        547,
+        332,
+        612,
+        397
+      ],
+      "image": "images/map04-point0-full.png",
+      "image_sha256": "68129048241c228f97aaf199e13f9f01d6014c84252208c546affffb60e13335"
+    },
+    {
+      "id": "map04-point0-crop",
+      "point_id": "map04-point0",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "answer": "5",
+      "swatches": [
+        [
+          255,
+          159,
+          0
+        ],
+        [
+          0,
+          28,
+          57
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          177,
+          255,
+          70
+        ],
+        [
+          0,
+          197,
+          255
+        ],
+        [
+          0,
+          0,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        197,
+        255
+      ],
+      "source_image": "images/map04-point0.png",
+      "source_sha256": "68129048241c228f97aaf199e13f9f01d6014c84252208c546affffb60e13335",
+      "crop_box": [
+        547,
+        332,
+        612,
+        397
+      ],
+      "image": "images/map04-point0-crop.png",
+      "image_sha256": "0a6eb8e677847c7ac122e409ca8313834ba0e0f510006512d5ec042d8c48c0ce"
+    },
+    {
+      "id": "map04-point1-crop",
+      "point_id": "map04-point1",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "answer": "2",
+      "swatches": [
+        [
+          255,
+          104,
+          0
+        ],
+        [
+          209,
+          255,
+          38
+        ],
+        [
+          10,
+          108,
+          94
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          25,
+          255,
+          222
+        ],
+        [
+          128,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        209,
+        255,
+        38
+      ],
+      "source_image": "images/map04-point1.png",
+      "source_sha256": "5afa8899c92d20dad1b148fc9581ab8401095debf72c0c22c74057d6f632f2f2",
+      "crop_box": [
+        442,
+        226,
+        507,
+        291
+      ],
+      "image": "images/map04-point1-crop.png",
+      "image_sha256": "fab72d3d32a8100c915219f99040bde6a59f1072ad45cbb5b57cd69fd7417c12"
+    },
+    {
+      "id": "map04-point1-full",
+      "point_id": "map04-point1",
+      "condition": "full",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "answer": "2",
+      "swatches": [
+        [
+          255,
+          104,
+          0
+        ],
+        [
+          209,
+          255,
+          38
+        ],
+        [
+          10,
+          108,
+          94
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          25,
+          255,
+          222
+        ],
+        [
+          128,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        209,
+        255,
+        38
+      ],
+      "source_image": "images/map04-point1.png",
+      "source_sha256": "5afa8899c92d20dad1b148fc9581ab8401095debf72c0c22c74057d6f632f2f2",
+      "crop_box": [
+        442,
+        226,
+        507,
+        291
+      ],
+      "image": "images/map04-point1-full.png",
+      "image_sha256": "5afa8899c92d20dad1b148fc9581ab8401095debf72c0c22c74057d6f632f2f2"
+    },
+    {
+      "id": "map04-point2-full",
+      "point_id": "map04-point2",
+      "condition": "full",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "answer": "6",
+      "swatches": [
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          255,
+          226,
+          0
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          0,
+          165,
+          255
+        ],
+        [
+          1,
+          15,
+          22
+        ],
+        [
+          93,
+          255,
+          154
+        ]
+      ],
+      "reference_rgb": [
+        93,
+        255,
+        154
+      ],
+      "source_image": "images/map04-point2.png",
+      "source_sha256": "e1514d53e0119b19b26a382264d5cc4df1170dabde772d968d5568ea001a0fee",
+      "crop_box": [
+        571,
+        156,
+        636,
+        221
+      ],
+      "image": "images/map04-point2-full.png",
+      "image_sha256": "e1514d53e0119b19b26a382264d5cc4df1170dabde772d968d5568ea001a0fee"
+    },
+    {
+      "id": "map04-point2-crop",
+      "point_id": "map04-point2",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "answer": "6",
+      "swatches": [
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          255,
+          226,
+          0
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          0,
+          165,
+          255
+        ],
+        [
+          1,
+          15,
+          22
+        ],
+        [
+          93,
+          255,
+          154
+        ]
+      ],
+      "reference_rgb": [
+        93,
+        255,
+        154
+      ],
+      "source_image": "images/map04-point2.png",
+      "source_sha256": "e1514d53e0119b19b26a382264d5cc4df1170dabde772d968d5568ea001a0fee",
+      "crop_box": [
+        571,
+        156,
+        636,
+        221
+      ],
+      "image": "images/map04-point2-crop.png",
+      "image_sha256": "c8a8acc3d0ef1c204f3eb2e734f61e2fe61a9d7faea6cc723d06625dd1a158cc"
+    },
+    {
+      "id": "map04-point3-crop",
+      "point_id": "map04-point3",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "answer": "5",
+      "swatches": [
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          26,
+          70
+        ],
+        [
+          190,
+          255,
+          57
+        ],
+        [
+          255,
+          152,
+          0
+        ],
+        [
+          12,
+          245,
+          235
+        ],
+        [
+          0,
+          57,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        12,
+        245,
+        235
+      ],
+      "source_image": "images/map04-point3.png",
+      "source_sha256": "62557a36ef5c0d88459251fe7d1060c7c0173fb31478aade5d662bca4b268745",
+      "crop_box": [
+        361,
+        79,
+        426,
+        144
+      ],
+      "image": "images/map04-point3-crop.png",
+      "image_sha256": "dad38a6e6df59f53fce7684e6514e2d9b1a60e56e05c9077a40f3aa2f50b4dfc"
+    },
+    {
+      "id": "map04-point3-full",
+      "point_id": "map04-point3",
+      "condition": "full",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "answer": "5",
+      "swatches": [
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          26,
+          70
+        ],
+        [
+          190,
+          255,
+          57
+        ],
+        [
+          255,
+          152,
+          0
+        ],
+        [
+          12,
+          245,
+          235
+        ],
+        [
+          0,
+          57,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        12,
+        245,
+        235
+      ],
+      "source_image": "images/map04-point3.png",
+      "source_sha256": "62557a36ef5c0d88459251fe7d1060c7c0173fb31478aade5d662bca4b268745",
+      "crop_box": [
+        361,
+        79,
+        426,
+        144
+      ],
+      "image": "images/map04-point3-full.png",
+      "image_sha256": "62557a36ef5c0d88459251fe7d1060c7c0173fb31478aade5d662bca4b268745"
+    },
+    {
+      "id": "map05-point0-full",
+      "point_id": "map05-point0",
+      "condition": "full",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "1",
+      "swatches": [
+        [
+          77,
+          255,
+          170
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          251,
+          241,
+          0
+        ],
+        [
+          79,
+          137,
+          53
+        ],
+        [
+          0,
+          0,
+          9
+        ]
+      ],
+      "reference_rgb": [
+        77,
+        255,
+        170
+      ],
+      "source_image": "images/map05-point0.png",
+      "source_sha256": "ff94f6e9fc5b2756d170ab0d4781eb0422de7c295d93d63b37ce69db60d3bbf8",
+      "crop_box": [
+        289,
+        87,
+        354,
+        152
+      ],
+      "image": "images/map05-point0-full.png",
+      "image_sha256": "ff94f6e9fc5b2756d170ab0d4781eb0422de7c295d93d63b37ce69db60d3bbf8"
+    },
+    {
+      "id": "map05-point0-crop",
+      "point_id": "map05-point0",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "1",
+      "swatches": [
+        [
+          77,
+          255,
+          170
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          251,
+          241,
+          0
+        ],
+        [
+          79,
+          137,
+          53
+        ],
+        [
+          0,
+          0,
+          9
+        ]
+      ],
+      "reference_rgb": [
+        77,
+        255,
+        170
+      ],
+      "source_image": "images/map05-point0.png",
+      "source_sha256": "ff94f6e9fc5b2756d170ab0d4781eb0422de7c295d93d63b37ce69db60d3bbf8",
+      "crop_box": [
+        289,
+        87,
+        354,
+        152
+      ],
+      "image": "images/map05-point0-crop.png",
+      "image_sha256": "498716eb79ccc5b5eafd5e1d87ee77efd68b2bd3a51858ed600e8629ad51384f"
+    },
+    {
+      "id": "map05-point1-crop",
+      "point_id": "map05-point1",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          149,
+          255
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          0,
+          200
+        ],
+        [
+          0,
+          0,
+          42
+        ],
+        [
+          40,
+          139,
+          95
+        ],
+        [
+          167,
+          255,
+          80
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        149,
+        255
+      ],
+      "source_image": "images/map05-point1.png",
+      "source_sha256": "07402373db00890783680c54f431fb59e80a1ec6234e15b192c83096e68e7291",
+      "crop_box": [
+        244,
+        340,
+        309,
+        405
+      ],
+      "image": "images/map05-point1-crop.png",
+      "image_sha256": "67bff84682dae1f4a8093d0172e545f0cebc64b8e6ed46fa58210a218c398fbe"
+    },
+    {
+      "id": "map05-point1-full",
+      "point_id": "map05-point1",
+      "condition": "full",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          149,
+          255
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          0,
+          200
+        ],
+        [
+          0,
+          0,
+          42
+        ],
+        [
+          40,
+          139,
+          95
+        ],
+        [
+          167,
+          255,
+          80
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        149,
+        255
+      ],
+      "source_image": "images/map05-point1.png",
+      "source_sha256": "07402373db00890783680c54f431fb59e80a1ec6234e15b192c83096e68e7291",
+      "crop_box": [
+        244,
+        340,
+        309,
+        405
+      ],
+      "image": "images/map05-point1-full.png",
+      "image_sha256": "07402373db00890783680c54f431fb59e80a1ec6234e15b192c83096e68e7291"
+    },
+    {
+      "id": "map05-point2-full",
+      "point_id": "map05-point2",
+      "condition": "full",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "4",
+      "swatches": [
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          64,
+          255,
+          183
+        ],
+        [
+          255,
+          182,
+          0
+        ],
+        [
+          29,
+          23,
+          6
+        ],
+        [
+          0,
+          125,
+          150
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        182,
+        0
+      ],
+      "source_image": "images/map05-point2.png",
+      "source_sha256": "f1edbefaac96f9c66137b023d710978ac538e6067c20af9dd12c692be4e581d0",
+      "crop_box": [
+        656,
+        270,
+        721,
+        335
+      ],
+      "image": "images/map05-point2-full.png",
+      "image_sha256": "f1edbefaac96f9c66137b023d710978ac538e6067c20af9dd12c692be4e581d0"
+    },
+    {
+      "id": "map05-point2-crop",
+      "point_id": "map05-point2",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "4",
+      "swatches": [
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          64,
+          255,
+          183
+        ],
+        [
+          255,
+          182,
+          0
+        ],
+        [
+          29,
+          23,
+          6
+        ],
+        [
+          0,
+          125,
+          150
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        182,
+        0
+      ],
+      "source_image": "images/map05-point2.png",
+      "source_sha256": "f1edbefaac96f9c66137b023d710978ac538e6067c20af9dd12c692be4e581d0",
+      "crop_box": [
+        656,
+        270,
+        721,
+        335
+      ],
+      "image": "images/map05-point2-crop.png",
+      "image_sha256": "79981bc15f873fb703714de3047327bf12d503f01d4bfa4bb69c43395bcb96b7"
+    },
+    {
+      "id": "map05-point3-crop",
+      "point_id": "map05-point3",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "3",
+      "swatches": [
+        [
+          42,
+          156,
+          108
+        ],
+        [
+          0,
+          229,
+          248
+        ],
+        [
+          246,
+          11,
+          0
+        ],
+        [
+          0,
+          61,
+          255
+        ],
+        [
+          0,
+          0,
+          101
+        ],
+        [
+          183,
+          255,
+          64
+        ]
+      ],
+      "reference_rgb": [
+        246,
+        11,
+        0
+      ],
+      "source_image": "images/map05-point3.png",
+      "source_sha256": "5c13e5dba76a47d24ce0301caa132e89c2819272e7a5ac34f4e92e492f73695b",
+      "crop_box": [
+        305,
+        242,
+        370,
+        307
+      ],
+      "image": "images/map05-point3-crop.png",
+      "image_sha256": "dee6ab281fb6f8a081eab443478b03735ea11ef497b8099564e097ae19fae749"
+    },
+    {
+      "id": "map05-point3-full",
+      "point_id": "map05-point3",
+      "condition": "full",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "answer": "3",
+      "swatches": [
+        [
+          42,
+          156,
+          108
+        ],
+        [
+          0,
+          229,
+          248
+        ],
+        [
+          246,
+          11,
+          0
+        ],
+        [
+          0,
+          61,
+          255
+        ],
+        [
+          0,
+          0,
+          101
+        ],
+        [
+          183,
+          255,
+          64
+        ]
+      ],
+      "reference_rgb": [
+        246,
+        11,
+        0
+      ],
+      "source_image": "images/map05-point3.png",
+      "source_sha256": "5c13e5dba76a47d24ce0301caa132e89c2819272e7a5ac34f4e92e492f73695b",
+      "crop_box": [
+        305,
+        242,
+        370,
+        307
+      ],
+      "image": "images/map05-point3-full.png",
+      "image_sha256": "5c13e5dba76a47d24ce0301caa132e89c2819272e7a5ac34f4e92e492f73695b"
+    },
+    {
+      "id": "map06-point0-full",
+      "point_id": "map06-point0",
+      "condition": "full",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "answer": "5",
+      "swatches": [
+        [
+          67,
+          255,
+          180
+        ],
+        [
+          205,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          31,
+          40,
+          15
+        ],
+        [
+          255,
+          167,
+          0
+        ],
+        [
+          0,
+          148,
+          254
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        167,
+        0
+      ],
+      "source_image": "images/map06-point0.png",
+      "source_sha256": "74ce89963df63475785c60821cc5ea607ca2f9ed9182368664b63452b56ccf72",
+      "crop_box": [
+        555,
+        164,
+        620,
+        229
+      ],
+      "image": "images/map06-point0-full.png",
+      "image_sha256": "74ce89963df63475785c60821cc5ea607ca2f9ed9182368664b63452b56ccf72"
+    },
+    {
+      "id": "map06-point0-crop",
+      "point_id": "map06-point0",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "answer": "5",
+      "swatches": [
+        [
+          67,
+          255,
+          180
+        ],
+        [
+          205,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          31,
+          40,
+          15
+        ],
+        [
+          255,
+          167,
+          0
+        ],
+        [
+          0,
+          148,
+          254
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        167,
+        0
+      ],
+      "source_image": "images/map06-point0.png",
+      "source_sha256": "74ce89963df63475785c60821cc5ea607ca2f9ed9182368664b63452b56ccf72",
+      "crop_box": [
+        555,
+        164,
+        620,
+        229
+      ],
+      "image": "images/map06-point0-crop.png",
+      "image_sha256": "783f0e5ab9bff43c2a0578030c0c6793e54d66ec687d9a8f6e6ce92c6c33e951"
+    },
+    {
+      "id": "map06-point1-crop",
+      "point_id": "map06-point1",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "answer": "2",
+      "swatches": [
+        [
+          0,
+          0,
+          96
+        ],
+        [
+          255,
+          26,
+          0
+        ],
+        [
+          0,
+          57,
+          255
+        ],
+        [
+          84,
+          76,
+          3
+        ],
+        [
+          177,
+          255,
+          70
+        ],
+        [
+          0,
+          229,
+          248
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        26,
+        0
+      ],
+      "source_image": "images/map06-point1.png",
+      "source_sha256": "1dc7881aa1c98195401f948ba1bfcdd59f026846307acd172a5eab0065dfeef8",
+      "crop_box": [
+        414,
+        152,
+        479,
+        217
+      ],
+      "image": "images/map06-point1-crop.png",
+      "image_sha256": "7c0adf4805ad657907cb70f0c115f889fffa21e2ecdddb2c3799112f65775f5c"
+    },
+    {
+      "id": "map06-point1-full",
+      "point_id": "map06-point1",
+      "condition": "full",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "answer": "2",
+      "swatches": [
+        [
+          0,
+          0,
+          96
+        ],
+        [
+          255,
+          26,
+          0
+        ],
+        [
+          0,
+          57,
+          255
+        ],
+        [
+          84,
+          76,
+          3
+        ],
+        [
+          177,
+          255,
+          70
+        ],
+        [
+          0,
+          229,
+          248
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        26,
+        0
+      ],
+      "source_image": "images/map06-point1.png",
+      "source_sha256": "1dc7881aa1c98195401f948ba1bfcdd59f026846307acd172a5eab0065dfeef8",
+      "crop_box": [
+        414,
+        152,
+        479,
+        217
+      ],
+      "image": "images/map06-point1-full.png",
+      "image_sha256": "1dc7881aa1c98195401f948ba1bfcdd59f026846307acd172a5eab0065dfeef8"
+    },
+    {
+      "id": "map06-point2-full",
+      "point_id": "map06-point2",
+      "condition": "full",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "answer": "1",
+      "swatches": [
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          197
+        ],
+        [
+          238,
+          255,
+          9
+        ],
+        [
+          46,
+          137,
+          86
+        ],
+        [
+          255,
+          96,
+          0
+        ],
+        [
+          0,
+          229,
+          248
+        ]
+      ],
+      "reference_rgb": [
+        128,
+        0,
+        0
+      ],
+      "source_image": "images/map06-point2.png",
+      "source_sha256": "6ab0553fc93b82bc92916bbb4605f641f213f64ee1b1d8131794bd9a6f382181",
+      "crop_box": [
+        426,
+        234,
+        491,
+        299
+      ],
+      "image": "images/map06-point2-full.png",
+      "image_sha256": "6ab0553fc93b82bc92916bbb4605f641f213f64ee1b1d8131794bd9a6f382181"
+    },
+    {
+      "id": "map06-point2-crop",
+      "point_id": "map06-point2",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "answer": "1",
+      "swatches": [
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          197
+        ],
+        [
+          238,
+          255,
+          9
+        ],
+        [
+          46,
+          137,
+          86
+        ],
+        [
+          255,
+          96,
+          0
+        ],
+        [
+          0,
+          229,
+          248
+        ]
+      ],
+      "reference_rgb": [
+        128,
+        0,
+        0
+      ],
+      "source_image": "images/map06-point2.png",
+      "source_sha256": "6ab0553fc93b82bc92916bbb4605f641f213f64ee1b1d8131794bd9a6f382181",
+      "crop_box": [
+        426,
+        234,
+        491,
+        299
+      ],
+      "image": "images/map06-point2-crop.png",
+      "image_sha256": "ea90dbf26d677ab89a810a04f818264f0c7ba04426120f67a4895c1b928fff60"
+    },
+    {
+      "id": "map06-point3-crop",
+      "point_id": "map06-point3",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "answer": "4",
+      "swatches": [
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          255,
+          182,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          205,
+          255
+        ],
+        [
+          0,
+          1,
+          11
+        ]
+      ],
+      "reference_rgb": [
+        135,
+        255,
+        112
+      ],
+      "source_image": "images/map06-point3.png",
+      "source_sha256": "3af53da955eb6d265ed7be098c45f91072574f39fd1171b9c0b455a6807f9a8c",
+      "crop_box": [
+        285,
+        128,
+        350,
+        193
+      ],
+      "image": "images/map06-point3-crop.png",
+      "image_sha256": "559fd62441d3cc31d75872c936d7e54b8bbd88e8a7d13efdb888e2c790f3f406"
+    },
+    {
+      "id": "map06-point3-full",
+      "point_id": "map06-point3",
+      "condition": "full",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "answer": "4",
+      "swatches": [
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          255,
+          182,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          205,
+          255
+        ],
+        [
+          0,
+          1,
+          11
+        ]
+      ],
+      "reference_rgb": [
+        135,
+        255,
+        112
+      ],
+      "source_image": "images/map06-point3.png",
+      "source_sha256": "3af53da955eb6d265ed7be098c45f91072574f39fd1171b9c0b455a6807f9a8c",
+      "crop_box": [
+        285,
+        128,
+        350,
+        193
+      ],
+      "image": "images/map06-point3-full.png",
+      "image_sha256": "3af53da955eb6d265ed7be098c45f91072574f39fd1171b9c0b455a6807f9a8c"
+    },
+    {
+      "id": "map07-point0-full",
+      "point_id": "map07-point0",
+      "condition": "full",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "answer": "5",
+      "swatches": [
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          29,
+          108,
+          177
+        ],
+        [
+          171,
+          208,
+          230
+        ],
+        [
+          95,
+          166,
+          209
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          2,
+          7,
+          12
+        ]
+      ],
+      "reference_rgb": [
+        8,
+        48,
+        107
+      ],
+      "source_image": "images/map07-point0.png",
+      "source_sha256": "ec3c378acd5e54f6db78f17a64e910d66efbfe744fedc8a137cf33d7c50cd645",
+      "crop_box": [
+        470,
+        340,
+        535,
+        405
+      ],
+      "image": "images/map07-point0-full.png",
+      "image_sha256": "ec3c378acd5e54f6db78f17a64e910d66efbfe744fedc8a137cf33d7c50cd645"
+    },
+    {
+      "id": "map07-point0-crop",
+      "point_id": "map07-point0",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "answer": "5",
+      "swatches": [
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          29,
+          108,
+          177
+        ],
+        [
+          171,
+          208,
+          230
+        ],
+        [
+          95,
+          166,
+          209
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          2,
+          7,
+          12
+        ]
+      ],
+      "reference_rgb": [
+        8,
+        48,
+        107
+      ],
+      "source_image": "images/map07-point0.png",
+      "source_sha256": "ec3c378acd5e54f6db78f17a64e910d66efbfe744fedc8a137cf33d7c50cd645",
+      "crop_box": [
+        470,
+        340,
+        535,
+        405
+      ],
+      "image": "images/map07-point0-crop.png",
+      "image_sha256": "e0494e37542d2c72d87bd3ca19dbb1fbf353b731a5029575bd6083d9091bdddd"
+    },
+    {
+      "id": "map07-point1-crop",
+      "point_id": "map07-point1",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "answer": "2",
+      "swatches": [
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          24,
+          101,
+          172
+        ],
+        [
+          2,
+          7,
+          12
+        ],
+        [
+          127,
+          185,
+          218
+        ],
+        [
+          69,
+          148,
+          199
+        ],
+        [
+          12,
+          53,
+          92
+        ]
+      ],
+      "reference_rgb": [
+        24,
+        101,
+        172
+      ],
+      "source_image": "images/map07-point1.png",
+      "source_sha256": "9713a7500e70ff3744f78b3ce1edf8e93a7bdbada77e304abfe9290a082a3862",
+      "crop_box": [
+        559,
+        87,
+        624,
+        152
+      ],
+      "image": "images/map07-point1-crop.png",
+      "image_sha256": "a0dd9bd6b00495c478c9591fbee0ac2f7894dec200693f772154d66d359d1cf3"
+    },
+    {
+      "id": "map07-point1-full",
+      "point_id": "map07-point1",
+      "condition": "full",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "answer": "2",
+      "swatches": [
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          24,
+          101,
+          172
+        ],
+        [
+          2,
+          7,
+          12
+        ],
+        [
+          127,
+          185,
+          218
+        ],
+        [
+          69,
+          148,
+          199
+        ],
+        [
+          12,
+          53,
+          92
+        ]
+      ],
+      "reference_rgb": [
+        24,
+        101,
+        172
+      ],
+      "source_image": "images/map07-point1.png",
+      "source_sha256": "9713a7500e70ff3744f78b3ce1edf8e93a7bdbada77e304abfe9290a082a3862",
+      "crop_box": [
+        559,
+        87,
+        624,
+        152
+      ],
+      "image": "images/map07-point1-full.png",
+      "image_sha256": "9713a7500e70ff3744f78b3ce1edf8e93a7bdbada77e304abfe9290a082a3862"
+    },
+    {
+      "id": "map07-point2-full",
+      "point_id": "map07-point2",
+      "condition": "full",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "answer": "5",
+      "swatches": [
+        [
+          5,
+          47,
+          94
+        ],
+        [
+          66,
+          146,
+          198
+        ],
+        [
+          2,
+          7,
+          12
+        ],
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          21,
+          98,
+          169
+        ],
+        [
+          125,
+          184,
+          218
+        ]
+      ],
+      "reference_rgb": [
+        21,
+        98,
+        169
+      ],
+      "source_image": "images/map07-point2.png",
+      "source_sha256": "8c489dad8d8c7f25af6b0d5a47790b355b7788464600418d8f5535a9c99cd5b6",
+      "crop_box": [
+        216,
+        83,
+        281,
+        148
+      ],
+      "image": "images/map07-point2-full.png",
+      "image_sha256": "8c489dad8d8c7f25af6b0d5a47790b355b7788464600418d8f5535a9c99cd5b6"
+    },
+    {
+      "id": "map07-point2-crop",
+      "point_id": "map07-point2",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "answer": "5",
+      "swatches": [
+        [
+          5,
+          47,
+          94
+        ],
+        [
+          66,
+          146,
+          198
+        ],
+        [
+          2,
+          7,
+          12
+        ],
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          21,
+          98,
+          169
+        ],
+        [
+          125,
+          184,
+          218
+        ]
+      ],
+      "reference_rgb": [
+        21,
+        98,
+        169
+      ],
+      "source_image": "images/map07-point2.png",
+      "source_sha256": "8c489dad8d8c7f25af6b0d5a47790b355b7788464600418d8f5535a9c99cd5b6",
+      "crop_box": [
+        216,
+        83,
+        281,
+        148
+      ],
+      "image": "images/map07-point2-crop.png",
+      "image_sha256": "887f441b8d7b562d80cbe349ad069f2b93dca452d90c8063077952ac6f715f5e"
+    },
+    {
+      "id": "map07-point3-crop",
+      "point_id": "map07-point3",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "answer": "6",
+      "swatches": [
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          2,
+          7,
+          12
+        ],
+        [
+          45,
+          125,
+          187
+        ],
+        [
+          108,
+          174,
+          214
+        ],
+        [
+          179,
+          211,
+          232
+        ],
+        [
+          8,
+          69,
+          138
+        ]
+      ],
+      "reference_rgb": [
+        8,
+        69,
+        138
+      ],
+      "source_image": "images/map07-point3.png",
+      "source_sha256": "924c85e78e38c8e84bc6c5f21b60aa72ef7a43947f944d4a3e87f38d102576b7",
+      "crop_box": [
+        236,
+        336,
+        301,
+        401
+      ],
+      "image": "images/map07-point3-crop.png",
+      "image_sha256": "5d3b73dd4c7460ba43c2b9aa05603e38cb5c376787454138bb741eedf480e94b"
+    },
+    {
+      "id": "map07-point3-full",
+      "point_id": "map07-point3",
+      "condition": "full",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "answer": "6",
+      "swatches": [
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          2,
+          7,
+          12
+        ],
+        [
+          45,
+          125,
+          187
+        ],
+        [
+          108,
+          174,
+          214
+        ],
+        [
+          179,
+          211,
+          232
+        ],
+        [
+          8,
+          69,
+          138
+        ]
+      ],
+      "reference_rgb": [
+        8,
+        69,
+        138
+      ],
+      "source_image": "images/map07-point3.png",
+      "source_sha256": "924c85e78e38c8e84bc6c5f21b60aa72ef7a43947f944d4a3e87f38d102576b7",
+      "crop_box": [
+        236,
+        336,
+        301,
+        401
+      ],
+      "image": "images/map07-point3-full.png",
+      "image_sha256": "924c85e78e38c8e84bc6c5f21b60aa72ef7a43947f944d4a3e87f38d102576b7"
+    },
+    {
+      "id": "map08-point0-full",
+      "point_id": "map08-point0",
+      "condition": "full",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "answer": "6",
+      "swatches": [
+        [
+          0,
+          100,
+          255
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          209,
+          0,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          0,
+          137
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        137
+      ],
+      "source_image": "images/map08-point0.png",
+      "source_sha256": "3db91ab864715c39600c66c84dadb28bd3babbdd55d43cd79691db2bc783bb44",
+      "crop_box": [
+        607,
+        250,
+        672,
+        315
+      ],
+      "image": "images/map08-point0-full.png",
+      "image_sha256": "3db91ab864715c39600c66c84dadb28bd3babbdd55d43cd79691db2bc783bb44"
+    },
+    {
+      "id": "map08-point0-crop",
+      "point_id": "map08-point0",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "answer": "6",
+      "swatches": [
+        [
+          0,
+          100,
+          255
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          209,
+          0,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          0,
+          137
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        137
+      ],
+      "source_image": "images/map08-point0.png",
+      "source_sha256": "3db91ab864715c39600c66c84dadb28bd3babbdd55d43cd79691db2bc783bb44",
+      "crop_box": [
+        607,
+        250,
+        672,
+        315
+      ],
+      "image": "images/map08-point0-crop.png",
+      "image_sha256": "20f8ea2f35466cae2da686bbdcc935cee9512032d3686d2e02710060eea1e0e0"
+    },
+    {
+      "id": "map08-point1-crop",
+      "point_id": "map08-point1",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "answer": "2",
+      "swatches": [
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          128
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          97,
+          255
+        ],
+        [
+          22,
+          255,
+          225
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        128
+      ],
+      "source_image": "images/map08-point1.png",
+      "source_sha256": "f7e58483f09778f86b99283e0015e327c30def6e37d0cf46816f66bd8676abf5",
+      "crop_box": [
+        490,
+        75,
+        555,
+        140
+      ],
+      "image": "images/map08-point1-crop.png",
+      "image_sha256": "8863f43bed0fb8f34795f6162e7534774a556f4a9449943ec873589d6ae1dc99"
+    },
+    {
+      "id": "map08-point1-full",
+      "point_id": "map08-point1",
+      "condition": "full",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "answer": "2",
+      "swatches": [
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          128
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          97,
+          255
+        ],
+        [
+          22,
+          255,
+          225
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        128
+      ],
+      "source_image": "images/map08-point1.png",
+      "source_sha256": "f7e58483f09778f86b99283e0015e327c30def6e37d0cf46816f66bd8676abf5",
+      "crop_box": [
+        490,
+        75,
+        555,
+        140
+      ],
+      "image": "images/map08-point1-full.png",
+      "image_sha256": "f7e58483f09778f86b99283e0015e327c30def6e37d0cf46816f66bd8676abf5"
+    },
+    {
+      "id": "map08-point2-full",
+      "point_id": "map08-point2",
+      "condition": "full",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "answer": "3",
+      "swatches": [
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          0,
+          0,
+          146
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          205,
+          0,
+          0
+        ],
+        [
+          0,
+          105,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        146
+      ],
+      "source_image": "images/map08-point2.png",
+      "source_sha256": "2c4a7f6ae4522a1bc367596cb4700c836dd5d3b57504016d0cffb0b2c83cce32",
+      "crop_box": [
+        309,
+        242,
+        374,
+        307
+      ],
+      "image": "images/map08-point2-full.png",
+      "image_sha256": "2c4a7f6ae4522a1bc367596cb4700c836dd5d3b57504016d0cffb0b2c83cce32"
+    },
+    {
+      "id": "map08-point2-crop",
+      "point_id": "map08-point2",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "answer": "3",
+      "swatches": [
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          0,
+          0,
+          146
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          205,
+          0,
+          0
+        ],
+        [
+          0,
+          105,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        146
+      ],
+      "source_image": "images/map08-point2.png",
+      "source_sha256": "2c4a7f6ae4522a1bc367596cb4700c836dd5d3b57504016d0cffb0b2c83cce32",
+      "crop_box": [
+        309,
+        242,
+        374,
+        307
+      ],
+      "image": "images/map08-point2-crop.png",
+      "image_sha256": "55a7d0de12025e66fbd5466e8a9d428176d3a0dfd84bcf6cee78d2ed828276a6"
+    },
+    {
+      "id": "map08-point3-crop",
+      "point_id": "map08-point3",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          0,
+          132
+        ],
+        [
+          0,
+          100,
+          255
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          214,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        132
+      ],
+      "source_image": "images/map08-point3.png",
+      "source_sha256": "9bf91e545007e067ebb4bdf883271989fd41bddd976631936b33d6fac348ac0e",
+      "crop_box": [
+        414,
+        176,
+        479,
+        241
+      ],
+      "image": "images/map08-point3-crop.png",
+      "image_sha256": "6449fac5ff8af862c1e130e10ee43cea4c43a8e828d0365c50f61beaa4418a9e"
+    },
+    {
+      "id": "map08-point3-full",
+      "point_id": "map08-point3",
+      "condition": "full",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          0,
+          132
+        ],
+        [
+          0,
+          100,
+          255
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          214,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        132
+      ],
+      "source_image": "images/map08-point3.png",
+      "source_sha256": "9bf91e545007e067ebb4bdf883271989fd41bddd976631936b33d6fac348ac0e",
+      "crop_box": [
+        414,
+        176,
+        479,
+        241
+      ],
+      "image": "images/map08-point3-full.png",
+      "image_sha256": "9bf91e545007e067ebb4bdf883271989fd41bddd976631936b33d6fac348ac0e"
+    },
+    {
+      "id": "map09-point0-full",
+      "point_id": "map09-point0",
+      "condition": "full",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "answer": "4",
+      "swatches": [
+        [
+          170,
+          175,
+          179
+        ],
+        [
+          23,
+          100,
+          171
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          214,
+          230,
+          244
+        ],
+        [
+          97,
+          103,
+          110
+        ],
+        [
+          79,
+          155,
+          203
+        ]
+      ],
+      "reference_rgb": [
+        214,
+        230,
+        244
+      ],
+      "source_image": "images/map09-point0.png",
+      "source_sha256": "81067919c0511dc5d41fe7a66e894e83e77f9882e68877af5b7ecc3ad6ebc32a",
+      "crop_box": [
+        301,
+        262,
+        366,
+        327
+      ],
+      "image": "images/map09-point0-full.png",
+      "image_sha256": "81067919c0511dc5d41fe7a66e894e83e77f9882e68877af5b7ecc3ad6ebc32a"
+    },
+    {
+      "id": "map09-point0-crop",
+      "point_id": "map09-point0",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "answer": "4",
+      "swatches": [
+        [
+          170,
+          175,
+          179
+        ],
+        [
+          23,
+          100,
+          171
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          214,
+          230,
+          244
+        ],
+        [
+          97,
+          103,
+          110
+        ],
+        [
+          79,
+          155,
+          203
+        ]
+      ],
+      "reference_rgb": [
+        214,
+        230,
+        244
+      ],
+      "source_image": "images/map09-point0.png",
+      "source_sha256": "81067919c0511dc5d41fe7a66e894e83e77f9882e68877af5b7ecc3ad6ebc32a",
+      "crop_box": [
+        301,
+        262,
+        366,
+        327
+      ],
+      "image": "images/map09-point0-crop.png",
+      "image_sha256": "87cd89ae98bb0285667a61e2fec2de33f84ab67121a09f40467f96f2be2508f1"
+    },
+    {
+      "id": "map09-point1-crop",
+      "point_id": "map09-point1",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "answer": "3",
+      "swatches": [
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          184,
+          190,
+          194
+        ],
+        [
+          240,
+          246,
+          253
+        ],
+        [
+          92,
+          164,
+          208
+        ],
+        [
+          28,
+          106,
+          176
+        ],
+        [
+          105,
+          112,
+          118
+        ]
+      ],
+      "reference_rgb": [
+        240,
+        246,
+        253
+      ],
+      "source_image": "images/map09-point1.png",
+      "source_sha256": "446d7c25435599a6c848ec936a3bc4dcdaeb7028f1c9ffc906a2eb46435518ee",
+      "crop_box": [
+        240,
+        340,
+        305,
+        405
+      ],
+      "image": "images/map09-point1-crop.png",
+      "image_sha256": "876b84fde09d2a2afcd0dc2bb3688516e9cd213a98e2731aac3ada9d58d4d2f2"
+    },
+    {
+      "id": "map09-point1-full",
+      "point_id": "map09-point1",
+      "condition": "full",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "answer": "3",
+      "swatches": [
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          184,
+          190,
+          194
+        ],
+        [
+          240,
+          246,
+          253
+        ],
+        [
+          92,
+          164,
+          208
+        ],
+        [
+          28,
+          106,
+          176
+        ],
+        [
+          105,
+          112,
+          118
+        ]
+      ],
+      "reference_rgb": [
+        240,
+        246,
+        253
+      ],
+      "source_image": "images/map09-point1.png",
+      "source_sha256": "446d7c25435599a6c848ec936a3bc4dcdaeb7028f1c9ffc906a2eb46435518ee",
+      "crop_box": [
+        240,
+        340,
+        305,
+        405
+      ],
+      "image": "images/map09-point1-full.png",
+      "image_sha256": "446d7c25435599a6c848ec936a3bc4dcdaeb7028f1c9ffc906a2eb46435518ee"
+    },
+    {
+      "id": "map09-point2-full",
+      "point_id": "map09-point2",
+      "condition": "full",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "answer": "6",
+      "swatches": [
+        [
+          77,
+          153,
+          202
+        ],
+        [
+          22,
+          99,
+          170
+        ],
+        [
+          165,
+          170,
+          175
+        ],
+        [
+          97,
+          103,
+          110
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          211,
+          228,
+          243
+        ]
+      ],
+      "reference_rgb": [
+        211,
+        228,
+        243
+      ],
+      "source_image": "images/map09-point2.png",
+      "source_sha256": "628bed9b0a2424e2e93a1acf262e56d3894ee82b4771fee8afe2604b2a9fb0d0",
+      "crop_box": [
+        244,
+        132,
+        309,
+        197
+      ],
+      "image": "images/map09-point2-full.png",
+      "image_sha256": "628bed9b0a2424e2e93a1acf262e56d3894ee82b4771fee8afe2604b2a9fb0d0"
+    },
+    {
+      "id": "map09-point2-crop",
+      "point_id": "map09-point2",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "answer": "6",
+      "swatches": [
+        [
+          77,
+          153,
+          202
+        ],
+        [
+          22,
+          99,
+          170
+        ],
+        [
+          165,
+          170,
+          175
+        ],
+        [
+          97,
+          103,
+          110
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          211,
+          228,
+          243
+        ]
+      ],
+      "reference_rgb": [
+        211,
+        228,
+        243
+      ],
+      "source_image": "images/map09-point2.png",
+      "source_sha256": "628bed9b0a2424e2e93a1acf262e56d3894ee82b4771fee8afe2604b2a9fb0d0",
+      "crop_box": [
+        244,
+        132,
+        309,
+        197
+      ],
+      "image": "images/map09-point2-crop.png",
+      "image_sha256": "ae3508d584e8a7bf503b909905825da1f2059547beb9fb385ab60df8d0df65fd"
+    },
+    {
+      "id": "map09-point3-crop",
+      "point_id": "map09-point3",
+      "condition": "crop",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "answer": "4",
+      "swatches": [
+        [
+          97,
+          103,
+          110
+        ],
+        [
+          180,
+          187,
+          193
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          231,
+          241,
+          250
+        ],
+        [
+          26,
+          104,
+          174
+        ],
+        [
+          88,
+          161,
+          207
+        ]
+      ],
+      "reference_rgb": [
+        231,
+        241,
+        250
+      ],
+      "source_image": "images/map09-point3.png",
+      "source_sha256": "b3561a6b52fd8d17467831f011227fd6621d1489c7cee6a91ce6580c7a59c124",
+      "crop_box": [
+        571,
+        324,
+        636,
+        389
+      ],
+      "image": "images/map09-point3-crop.png",
+      "image_sha256": "deae036b19454e2ee092b1d2f0dcfe3c29725de5d33f11bcaebc38dc232516cc"
+    },
+    {
+      "id": "map09-point3-full",
+      "point_id": "map09-point3",
+      "condition": "full",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "answer": "4",
+      "swatches": [
+        [
+          97,
+          103,
+          110
+        ],
+        [
+          180,
+          187,
+          193
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          231,
+          241,
+          250
+        ],
+        [
+          26,
+          104,
+          174
+        ],
+        [
+          88,
+          161,
+          207
+        ]
+      ],
+      "reference_rgb": [
+        231,
+        241,
+        250
+      ],
+      "source_image": "images/map09-point3.png",
+      "source_sha256": "b3561a6b52fd8d17467831f011227fd6621d1489c7cee6a91ce6580c7a59c124",
+      "crop_box": [
+        571,
+        324,
+        636,
+        389
+      ],
+      "image": "images/map09-point3-full.png",
+      "image_sha256": "b3561a6b52fd8d17467831f011227fd6621d1489c7cee6a91ce6580c7a59c124"
+    }
+  ]
+}

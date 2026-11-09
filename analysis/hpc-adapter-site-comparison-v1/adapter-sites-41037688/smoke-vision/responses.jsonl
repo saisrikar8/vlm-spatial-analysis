@@ -1,0 +1,4 @@
+{"id": "source06-point00-full", "backend": "base", "raw_response": "3", "seconds": 259.76340456097387, "visual_tokens": 616}
+{"id": "source06-point00-crop", "backend": "base", "raw_response": "2", "seconds": 0.26042770594358444, "visual_tokens": 616}
+{"id": "source06-point00-full", "backend": "adapted", "raw_response": "3", "seconds": 0.28681000391952693, "visual_tokens": 616}
+{"id": "source06-point00-crop", "backend": "adapted", "raw_response": "2", "seconds": 0.28704481292515993, "visual_tokens": 616}

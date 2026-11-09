@@ -1,0 +1,10 @@
+{
+  "job_id": 40947249,
+  "status_at_submission": "submitted",
+  "remote_project": "/global/scratch/users/tummalasaisrikar/vlm-spatial-analysis",
+  "remote_output": "runs/marker-color-control-40947249",
+  "manifest_sha256": "1c7d80235023753b7c6bcb2b4d1e46528b36451cf9813ca9c63c11b2e60faed9",
+  "partition": "savio3_gpu",
+  "gpu": "A40:1",
+  "calls": 80
+}

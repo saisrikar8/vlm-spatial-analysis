@@ -1,0 +1,26 @@
+{
+  "status": "all_outputs_complete_verified_locally",
+  "planned_calls": 80,
+  "manifest_sha256": "57c66b443fb359d5d9705476657cffc434070984f510ce61672ff9f8dd407f83",
+  "job_id": 41029953,
+  "remote_project": "/global/scratch/users/tummalasaisrikar/vlm-spatial-analysis",
+  "remote_output": "runs/resolution-color-matching-41029953",
+  "qos": "a40_gpu3_normal",
+  "partition": "savio3_gpu",
+  "gpu": "A40:1",
+  "script_sha256": "7e42ef660e3c33669ec9be68f3a9f0150dac10d6e9cdf3bdafabdd24d1376f32",
+  "previous_job_id": 41004048,
+  "previous_job_status": "PREEMPTED before inference",
+  "processor_inspection": {
+    "status": "verified",
+    "baseline_width": 784,
+    "baseline_height": 616,
+    "baseline_visual_tokens": 616,
+    "high_width": 1624,
+    "high_height": 1260,
+    "high_visual_tokens": 2610
+  },
+  "scheduler_status": "TIMEOUT after outputs saved",
+  "response_count": 80,
+  "missing_responses": 0
+}

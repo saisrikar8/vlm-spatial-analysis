@@ -1,0 +1,169 @@
+{
+  "development": {
+    "n": 8,
+    "conditions": {
+      "baseline": {
+        "correct": 2,
+        "valid": 8,
+        "accuracy": 0.25,
+        "oom": 0,
+        "mean_visual_tokens": 616,
+        "mean_preprocess_seconds": 0.016117982246214524,
+        "mean_generation_seconds": 35.23762452520896,
+        "mean_peak_allocated_bytes": 16755764736,
+        "mean_peak_reserved_bytes": 16938434560,
+        "processed_sizes": [
+          "784x616"
+        ],
+        "per_map": {
+          "4a587de011ddfe3b6677": {
+            "n": 4,
+            "correct": 2
+          },
+          "5258ff05e902962ceb10": {
+            "n": 4,
+            "correct": 0
+          }
+        }
+      },
+      "high": {
+        "correct": 3,
+        "valid": 8,
+        "accuracy": 0.375,
+        "oom": 0,
+        "mean_visual_tokens": 2610,
+        "mean_preprocess_seconds": 0.47070359787903726,
+        "mean_generation_seconds": 1.7743609558383469,
+        "mean_peak_allocated_bytes": 17207769600,
+        "mean_peak_reserved_bytes": 17775460352,
+        "processed_sizes": [
+          "1624x1260"
+        ],
+        "per_map": {
+          "4a587de011ddfe3b6677": {
+            "n": 4,
+            "correct": 2
+          },
+          "5258ff05e902962ceb10": {
+            "n": 4,
+            "correct": 1
+          }
+        }
+      }
+    },
+    "wrong_to_correct": 1,
+    "correct_to_wrong": 0,
+    "changed_answers": 2
+  },
+  "test": {
+    "n": 32,
+    "conditions": {
+      "baseline": {
+        "correct": 6,
+        "valid": 32,
+        "accuracy": 0.1875,
+        "oom": 0,
+        "mean_visual_tokens": 616,
+        "mean_preprocess_seconds": 0.012735754979075864,
+        "mean_generation_seconds": 0.27776854537660256,
+        "mean_peak_allocated_bytes": 16755764736,
+        "mean_peak_reserved_bytes": 16940793856,
+        "processed_sizes": [
+          "784x616"
+        ],
+        "per_map": {
+          "2eb6c49d98373c77ec46": {
+            "n": 4,
+            "correct": 1
+          },
+          "3e2766ccf29155c40d0f": {
+            "n": 4,
+            "correct": 0
+          },
+          "7af8529e95a2ee568f1e": {
+            "n": 4,
+            "correct": 2
+          },
+          "8b8219d1b92dbd59dd1e": {
+            "n": 4,
+            "correct": 1
+          },
+          "9340f83d554e60c854b3": {
+            "n": 4,
+            "correct": 0
+          },
+          "93addac79d51c6c4a569": {
+            "n": 4,
+            "correct": 1
+          },
+          "ac25c6f1570ac9b3f93b": {
+            "n": 4,
+            "correct": 0
+          },
+          "f828c198d96499081492": {
+            "n": 4,
+            "correct": 1
+          }
+        }
+      },
+      "high": {
+        "correct": 10,
+        "valid": 32,
+        "accuracy": 0.3125,
+        "oom": 0,
+        "mean_visual_tokens": 2610,
+        "mean_preprocess_seconds": 0.033889099686348345,
+        "mean_generation_seconds": 0.9836999776161974,
+        "mean_peak_allocated_bytes": 17207769600,
+        "mean_peak_reserved_bytes": 17775460352,
+        "processed_sizes": [
+          "1624x1260"
+        ],
+        "per_map": {
+          "2eb6c49d98373c77ec46": {
+            "n": 4,
+            "correct": 2
+          },
+          "3e2766ccf29155c40d0f": {
+            "n": 4,
+            "correct": 1
+          },
+          "7af8529e95a2ee568f1e": {
+            "n": 4,
+            "correct": 2
+          },
+          "8b8219d1b92dbd59dd1e": {
+            "n": 4,
+            "correct": 1
+          },
+          "9340f83d554e60c854b3": {
+            "n": 4,
+            "correct": 1
+          },
+          "93addac79d51c6c4a569": {
+            "n": 4,
+            "correct": 1
+          },
+          "ac25c6f1570ac9b3f93b": {
+            "n": 4,
+            "correct": 1
+          },
+          "f828c198d96499081492": {
+            "n": 4,
+            "correct": 1
+          }
+        }
+      }
+    },
+    "wrong_to_correct": 6,
+    "correct_to_wrong": 2,
+    "changed_answers": 14
+  },
+  "notes": [
+    "Exploratory reused examples; no significance, fresh-test or training claim.",
+    "Only processor resolution settings change; source images, choices, prompt, weights and generation stay fixed.",
+    "Higher resolution upsamples existing pixels; cannot recover missing native detail or uniquely isolate attention.",
+    "Costs include first-call effects and condition order; timing is descriptive. Peak GPU allocation includes model and inputs.",
+    "Missing, malformed and OOM outputs count incorrect; no adaptive resolution fallback."
+  ]
+}

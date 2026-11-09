@@ -1,0 +1,12 @@
+{
+  "status": "completed_verified_locally",
+  "manifest_sha256": "3af50ba6cd4ac57c222337b94bca4e70038268825aefd0abaad8e3228589c433",
+  "planned_calls": 120,
+  "job_id": 40967775,
+  "remote_project": "/global/scratch/users/tummalasaisrikar/vlm-spatial-analysis",
+  "remote_output": "runs/plain-patch-matching-40967775",
+  "qos": "savio_lowprio",
+  "partition": "savio3_gpu",
+  "gpu": "A40:1",
+  "queue_change_reason": "Normal queue group CPU cap; preemptible queue test estimate 2026-11-06 06:12 Pacific"
+}

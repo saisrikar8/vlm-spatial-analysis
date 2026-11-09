@@ -1,0 +1,105 @@
+{
+  "adapter_site": "vision",
+  "evaluated_split": "test",
+  "source_groups": 3,
+  "conditions": {
+    "full": {
+      "base": {
+        "n": 48,
+        "correct": 16,
+        "valid": 48,
+        "accuracy": 0.3333333333333333,
+        "per_source": {
+          "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/EvaporativeFraction/WECANN/WECANN.html": {
+            "n": 16,
+            "correct": 4
+          },
+          "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Runoff/CLASS/CLASS.html": {
+            "n": 16,
+            "correct": 8
+          },
+          "https://www.ilamb.org/CMIP6/historical/RadiationandEnergyCycle/SurfaceNetLWRadiation/CERESed4.1/CERESed4.1.html": {
+            "n": 16,
+            "correct": 4
+          }
+        }
+      },
+      "adapted": {
+        "n": 48,
+        "correct": 17,
+        "valid": 48,
+        "accuracy": 0.3541666666666667,
+        "per_source": {
+          "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/EvaporativeFraction/WECANN/WECANN.html": {
+            "n": 16,
+            "correct": 4
+          },
+          "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Runoff/CLASS/CLASS.html": {
+            "n": 16,
+            "correct": 9
+          },
+          "https://www.ilamb.org/CMIP6/historical/RadiationandEnergyCycle/SurfaceNetLWRadiation/CERESed4.1/CERESed4.1.html": {
+            "n": 16,
+            "correct": 4
+          }
+        }
+      },
+      "paired": {
+        "wrong_to_correct": 5,
+        "correct_to_wrong": 4
+      }
+    },
+    "crop": {
+      "base": {
+        "n": 48,
+        "correct": 20,
+        "valid": 48,
+        "accuracy": 0.4166666666666667,
+        "per_source": {
+          "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/EvaporativeFraction/WECANN/WECANN.html": {
+            "n": 16,
+            "correct": 5
+          },
+          "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Runoff/CLASS/CLASS.html": {
+            "n": 16,
+            "correct": 9
+          },
+          "https://www.ilamb.org/CMIP6/historical/RadiationandEnergyCycle/SurfaceNetLWRadiation/CERESed4.1/CERESed4.1.html": {
+            "n": 16,
+            "correct": 6
+          }
+        }
+      },
+      "adapted": {
+        "n": 48,
+        "correct": 37,
+        "valid": 48,
+        "accuracy": 0.7708333333333334,
+        "per_source": {
+          "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/EvaporativeFraction/WECANN/WECANN.html": {
+            "n": 16,
+            "correct": 10
+          },
+          "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Runoff/CLASS/CLASS.html": {
+            "n": 16,
+            "correct": 14
+          },
+          "https://www.ilamb.org/CMIP6/historical/RadiationandEnergyCycle/SurfaceNetLWRadiation/CERESed4.1/CERESed4.1.html": {
+            "n": 16,
+            "correct": 13
+          }
+        }
+      },
+      "paired": {
+        "wrong_to_correct": 18,
+        "correct_to_wrong": 1
+      }
+    }
+  },
+  "notes": [
+    "One fixed-epoch seed; only three held-out source groups in full pilot, not independent per-point evidence.",
+    "Same images/prompts/resolution/generation for base and saved adapter. All original weights frozen; LoRA site recorded separately.",
+    "Test source groups excluded from training and recent diagnostics, but drawn from archived ILAMB images.",
+    "Six-choice color reading only; not numerical legend reading or geographic evaluation."
+  ]
+}

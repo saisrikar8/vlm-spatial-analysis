@@ -1,0 +1,204 @@
+{
+  "development": {
+    "n": 8,
+    "conditions": {
+      "full": {
+        "correct": 2,
+        "valid": 8,
+        "accuracy": 0.25,
+        "per_map": {
+          "4a587de011ddfe3b6677": {
+            "n": 4,
+            "correct": 2
+          },
+          "5258ff05e902962ceb10": {
+            "n": 4,
+            "correct": 0
+          }
+        }
+      },
+      "crop": {
+        "correct": 3,
+        "valid": 8,
+        "accuracy": 0.375,
+        "per_map": {
+          "4a587de011ddfe3b6677": {
+            "n": 4,
+            "correct": 2
+          },
+          "5258ff05e902962ceb10": {
+            "n": 4,
+            "correct": 1
+          }
+        }
+      },
+      "patch": {
+        "correct": 7,
+        "valid": 8,
+        "accuracy": 0.875,
+        "per_map": {
+          "4a587de011ddfe3b6677": {
+            "n": 4,
+            "correct": 3
+          },
+          "5258ff05e902962ceb10": {
+            "n": 4,
+            "correct": 4
+          }
+        }
+      }
+    },
+    "patch_comparisons": {
+      "full": {
+        "wrong_to_correct": 5,
+        "correct_to_wrong": 0,
+        "changed_answers": 6
+      },
+      "crop": {
+        "wrong_to_correct": 4,
+        "correct_to_wrong": 0,
+        "changed_answers": 4
+      }
+    }
+  },
+  "test": {
+    "n": 32,
+    "conditions": {
+      "full": {
+        "correct": 6,
+        "valid": 32,
+        "accuracy": 0.1875,
+        "per_map": {
+          "2eb6c49d98373c77ec46": {
+            "n": 4,
+            "correct": 1
+          },
+          "3e2766ccf29155c40d0f": {
+            "n": 4,
+            "correct": 0
+          },
+          "7af8529e95a2ee568f1e": {
+            "n": 4,
+            "correct": 2
+          },
+          "8b8219d1b92dbd59dd1e": {
+            "n": 4,
+            "correct": 1
+          },
+          "9340f83d554e60c854b3": {
+            "n": 4,
+            "correct": 0
+          },
+          "93addac79d51c6c4a569": {
+            "n": 4,
+            "correct": 1
+          },
+          "ac25c6f1570ac9b3f93b": {
+            "n": 4,
+            "correct": 0
+          },
+          "f828c198d96499081492": {
+            "n": 4,
+            "correct": 1
+          }
+        }
+      },
+      "crop": {
+        "correct": 12,
+        "valid": 32,
+        "accuracy": 0.375,
+        "per_map": {
+          "2eb6c49d98373c77ec46": {
+            "n": 4,
+            "correct": 3
+          },
+          "3e2766ccf29155c40d0f": {
+            "n": 4,
+            "correct": 2
+          },
+          "7af8529e95a2ee568f1e": {
+            "n": 4,
+            "correct": 2
+          },
+          "8b8219d1b92dbd59dd1e": {
+            "n": 4,
+            "correct": 2
+          },
+          "9340f83d554e60c854b3": {
+            "n": 4,
+            "correct": 1
+          },
+          "93addac79d51c6c4a569": {
+            "n": 4,
+            "correct": 0
+          },
+          "ac25c6f1570ac9b3f93b": {
+            "n": 4,
+            "correct": 2
+          },
+          "f828c198d96499081492": {
+            "n": 4,
+            "correct": 0
+          }
+        }
+      },
+      "patch": {
+        "correct": 27,
+        "valid": 32,
+        "accuracy": 0.84375,
+        "per_map": {
+          "2eb6c49d98373c77ec46": {
+            "n": 4,
+            "correct": 4
+          },
+          "3e2766ccf29155c40d0f": {
+            "n": 4,
+            "correct": 3
+          },
+          "7af8529e95a2ee568f1e": {
+            "n": 4,
+            "correct": 4
+          },
+          "8b8219d1b92dbd59dd1e": {
+            "n": 4,
+            "correct": 4
+          },
+          "9340f83d554e60c854b3": {
+            "n": 4,
+            "correct": 4
+          },
+          "93addac79d51c6c4a569": {
+            "n": 4,
+            "correct": 4
+          },
+          "ac25c6f1570ac9b3f93b": {
+            "n": 4,
+            "correct": 2
+          },
+          "f828c198d96499081492": {
+            "n": 4,
+            "correct": 2
+          }
+        }
+      }
+    },
+    "patch_comparisons": {
+      "full": {
+        "wrong_to_correct": 21,
+        "correct_to_wrong": 0,
+        "changed_answers": 22
+      },
+      "crop": {
+        "wrong_to_correct": 15,
+        "correct_to_wrong": 0,
+        "changed_answers": 16
+      }
+    }
+  },
+  "notes": [
+    "Exploratory reused inputs, no significance or fresh-test claim.",
+    "All conditions rerun under the same new conditional-target prompt. Do not conflate baseline scores with earlier prompt runs.",
+    "Plain patch removes marker, context and local variability while enlarging target; it does not isolate a single internal mechanism.",
+    "Patch accuracy includes visual color matching and numbered-option association; no numerical legend or geographic task."
+  ]
+}

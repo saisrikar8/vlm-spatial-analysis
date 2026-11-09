@@ -1,0 +1,13 @@
+{
+  "status": "completed_verified_locally",
+  "manifest_sha256": "60d0ad160ec596f14ef508d0a44bc5e1074996d7b5350850dbe072d8949e1891",
+  "planned_calls": 80,
+  "job_id": 40957950,
+  "remote_project": "/global/scratch/users/tummalasaisrikar/vlm-spatial-analysis",
+  "remote_output": "runs/crop-color-matching-40957950",
+  "qos": "savio_lowprio",
+  "partition": "savio3_gpu",
+  "gpu": "A40:1",
+  "cpus_per_task": 8,
+  "queue_change_reason": "Normal A40 QOS group CPU limit; moved same job to authorized preemptible queue"
+}

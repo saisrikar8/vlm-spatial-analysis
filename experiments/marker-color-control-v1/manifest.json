@@ -1,0 +1,4668 @@
+{
+  "experiment": "marker_color_control_v1",
+  "source_manifest_sha256": "53d0c83d1ec16d0a0b94a6108968bfcffb720a60df9c49bfa6d279be11f40746",
+  "prompt": "Which numbered color swatch at the bottom best matches the underlying map color at the CENTER of the circular marker? Match the map color, not the marker outline or the gray grid lines. Return only one digit from 1 to 6. Do not read numerical map values or report the grid cell.",
+  "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 16
+  },
+  "seed": 20261106,
+  "conditions": {
+    "red": [
+      255,
+      0,
+      0
+    ],
+    "magenta": [
+      255,
+      0,
+      255
+    ]
+  },
+  "design": "Same neutral prompt for both colors; same points, choices, positions, center pixels and model. Alternate condition order by point.",
+  "primary": "All 32 reused test points, paired red vs magenta exact color-choice accuracy; missing/invalid incorrect. Development separate; exploratory follow-up.",
+  "examples": [
+    {
+      "id": "map00-point0-red",
+      "point_id": "map00-point0",
+      "condition": "red",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 473,
+      "y": 74,
+      "answer": "3",
+      "swatches": [
+        [
+          77,
+          255,
+          170
+        ],
+        [
+          255,
+          89,
+          0
+        ],
+        [
+          0,
+          41,
+          255
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          0,
+          53,
+          87
+        ],
+        [
+          128,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        41,
+        255
+      ],
+      "source_image": "images/map00-point0.png",
+      "source_sha256": "08c8ee94213e63fb789395a03553a98ccfa4a2a5dc27837651442dabbd9f4d81",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map00-point0-red.png",
+      "image_sha256": "08c8ee94213e63fb789395a03553a98ccfa4a2a5dc27837651442dabbd9f4d81"
+    },
+    {
+      "id": "map00-point0-magenta",
+      "point_id": "map00-point0",
+      "condition": "magenta",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 473,
+      "y": 74,
+      "answer": "3",
+      "swatches": [
+        [
+          77,
+          255,
+          170
+        ],
+        [
+          255,
+          89,
+          0
+        ],
+        [
+          0,
+          41,
+          255
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          0,
+          53,
+          87
+        ],
+        [
+          128,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        41,
+        255
+      ],
+      "source_image": "images/map00-point0.png",
+      "source_sha256": "08c8ee94213e63fb789395a03553a98ccfa4a2a5dc27837651442dabbd9f4d81",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map00-point0-magenta.png",
+      "image_sha256": "c5bedd3d553abf9d8fb4cae222a35d7d4dd453a7aa4124bff2acf314643da1df"
+    },
+    {
+      "id": "map00-point1-magenta",
+      "point_id": "map00-point1",
+      "condition": "magenta",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 280,
+      "y": 319,
+      "answer": "3",
+      "swatches": [
+        [
+          1,
+          10,
+          47
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          168,
+          255
+        ],
+        [
+          255,
+          167,
+          0
+        ],
+        [
+          0,
+          0,
+          218
+        ],
+        [
+          170,
+          255,
+          77
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        168,
+        255
+      ],
+      "source_image": "images/map00-point1.png",
+      "source_sha256": "aec805efc4c5367a628c1921113c681e731abc492a66979cf4536325f250ae84",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map00-point1-magenta.png",
+      "image_sha256": "c15fa0e7e14e7d32e2cf066948bdd9135ba882bc7a72ba78a4c724d0b3463b0e"
+    },
+    {
+      "id": "map00-point1-red",
+      "point_id": "map00-point1",
+      "condition": "red",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 280,
+      "y": 319,
+      "answer": "3",
+      "swatches": [
+        [
+          1,
+          10,
+          47
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          168,
+          255
+        ],
+        [
+          255,
+          167,
+          0
+        ],
+        [
+          0,
+          0,
+          218
+        ],
+        [
+          170,
+          255,
+          77
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        168,
+        255
+      ],
+      "source_image": "images/map00-point1.png",
+      "source_sha256": "aec805efc4c5367a628c1921113c681e731abc492a66979cf4536325f250ae84",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map00-point1-red.png",
+      "image_sha256": "aec805efc4c5367a628c1921113c681e731abc492a66979cf4536325f250ae84"
+    },
+    {
+      "id": "map00-point2-red",
+      "point_id": "map00-point2",
+      "condition": "red",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 598,
+      "y": 229,
+      "answer": "6",
+      "swatches": [
+        [
+          0,
+          0,
+          141
+        ],
+        [
+          0,
+          229,
+          248
+        ],
+        [
+          0,
+          84,
+          255
+        ],
+        [
+          186,
+          255,
+          60
+        ],
+        [
+          255,
+          141,
+          0
+        ],
+        [
+          214,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        214,
+        0,
+        0
+      ],
+      "source_image": "images/map00-point2.png",
+      "source_sha256": "6c361d6a991e694454f4648906519e0ea557fe6469ef48a17966588830aa530a",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map00-point2-red.png",
+      "image_sha256": "6c361d6a991e694454f4648906519e0ea557fe6469ef48a17966588830aa530a"
+    },
+    {
+      "id": "map00-point2-magenta",
+      "point_id": "map00-point2",
+      "condition": "magenta",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 598,
+      "y": 229,
+      "answer": "6",
+      "swatches": [
+        [
+          0,
+          0,
+          141
+        ],
+        [
+          0,
+          229,
+          248
+        ],
+        [
+          0,
+          84,
+          255
+        ],
+        [
+          186,
+          255,
+          60
+        ],
+        [
+          255,
+          141,
+          0
+        ],
+        [
+          214,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        214,
+        0,
+        0
+      ],
+      "source_image": "images/map00-point2.png",
+      "source_sha256": "6c361d6a991e694454f4648906519e0ea557fe6469ef48a17966588830aa530a",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map00-point2-magenta.png",
+      "image_sha256": "d7ce5c1bb346532eb879ce8947882350a77a98be28f5e4294d80a1d2607429c4"
+    },
+    {
+      "id": "map00-point3-magenta",
+      "point_id": "map00-point3",
+      "condition": "magenta",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 522,
+      "y": 327,
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          200,
+          255
+        ],
+        [
+          177,
+          255,
+          70
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          255,
+          159,
+          0
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          11,
+          71
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        200,
+        255
+      ],
+      "source_image": "images/map00-point3.png",
+      "source_sha256": "012af53a76c233ec942f864eb4dcd3c3346ad17a1ce67bd9b9a29daf101c5161",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map00-point3-magenta.png",
+      "image_sha256": "7434b8403cc6137a4852109289e8dea3d8dd2cc5c055b169646598eb6700002d"
+    },
+    {
+      "id": "map00-point3-red",
+      "point_id": "map00-point3",
+      "condition": "red",
+      "split": "development",
+      "map_id": "4a587de011ddfe3b6677",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 522,
+      "y": 327,
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          200,
+          255
+        ],
+        [
+          177,
+          255,
+          70
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          255,
+          159,
+          0
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          11,
+          71
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        200,
+        255
+      ],
+      "source_image": "images/map00-point3.png",
+      "source_sha256": "012af53a76c233ec942f864eb4dcd3c3346ad17a1ce67bd9b9a29daf101c5161",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map00-point3-red.png",
+      "image_sha256": "012af53a76c233ec942f864eb4dcd3c3346ad17a1ce67bd9b9a29daf101c5161"
+    },
+    {
+      "id": "map01-point0-red",
+      "point_id": "map01-point0",
+      "condition": "red",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "x": 223,
+      "y": 323,
+      "answer": "2",
+      "swatches": [
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          0,
+          0,
+          128
+        ],
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          0,
+          97,
+          255
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          22,
+          255,
+          225
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        128
+      ],
+      "source_image": "images/map01-point0.png",
+      "source_sha256": "d767c16481f7bc1c3fd7495045f501773d994c11ce4f4238130224bedb1e4846",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map01-point0-red.png",
+      "image_sha256": "d767c16481f7bc1c3fd7495045f501773d994c11ce4f4238130224bedb1e4846"
+    },
+    {
+      "id": "map01-point0-magenta",
+      "point_id": "map01-point0",
+      "condition": "magenta",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "x": 223,
+      "y": 323,
+      "answer": "2",
+      "swatches": [
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          0,
+          0,
+          128
+        ],
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          0,
+          97,
+          255
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          22,
+          255,
+          225
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        128
+      ],
+      "source_image": "images/map01-point0.png",
+      "source_sha256": "d767c16481f7bc1c3fd7495045f501773d994c11ce4f4238130224bedb1e4846",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map01-point0-magenta.png",
+      "image_sha256": "c4b50bc72ab6daa4be6914d19b4ab5fa360a2077f344c20acf8b1d9a2071990e"
+    },
+    {
+      "id": "map01-point1-magenta",
+      "point_id": "map01-point1",
+      "condition": "magenta",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "x": 473,
+      "y": 74,
+      "answer": "3",
+      "swatches": [
+        [
+          106,
+          255,
+          141
+        ],
+        [
+          255,
+          85,
+          0
+        ],
+        [
+          0,
+          116,
+          255
+        ],
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          122
+        ],
+        [
+          254,
+          237,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        116,
+        255
+      ],
+      "source_image": "images/map01-point1.png",
+      "source_sha256": "c3ae56a0395a9fa031bb053fc6f658e49f385370936f7764818dabd6a6d76a17",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map01-point1-magenta.png",
+      "image_sha256": "9be807c73735d9f1760d3deb0bda80876ac0d15185c7621849558e091cf86449"
+    },
+    {
+      "id": "map01-point1-red",
+      "point_id": "map01-point1",
+      "condition": "red",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "x": 473,
+      "y": 74,
+      "answer": "3",
+      "swatches": [
+        [
+          106,
+          255,
+          141
+        ],
+        [
+          255,
+          85,
+          0
+        ],
+        [
+          0,
+          116,
+          255
+        ],
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          122
+        ],
+        [
+          254,
+          237,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        116,
+        255
+      ],
+      "source_image": "images/map01-point1.png",
+      "source_sha256": "c3ae56a0395a9fa031bb053fc6f658e49f385370936f7764818dabd6a6d76a17",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map01-point1-red.png",
+      "image_sha256": "c3ae56a0395a9fa031bb053fc6f658e49f385370936f7764818dabd6a6d76a17"
+    },
+    {
+      "id": "map01-point2-red",
+      "point_id": "map01-point2",
+      "condition": "red",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "x": 518,
+      "y": 147,
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          0,
+          132
+        ],
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          0,
+          100,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        132
+      ],
+      "source_image": "images/map01-point2.png",
+      "source_sha256": "6bc63b71c1b51cada9c179f6bc91f6a253c2892f2881db4b5fa5477d38a0f165",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map01-point2-red.png",
+      "image_sha256": "6bc63b71c1b51cada9c179f6bc91f6a253c2892f2881db4b5fa5477d38a0f165"
+    },
+    {
+      "id": "map01-point2-magenta",
+      "point_id": "map01-point2",
+      "condition": "magenta",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "x": 518,
+      "y": 147,
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          0,
+          132
+        ],
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          0,
+          100,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        132
+      ],
+      "source_image": "images/map01-point2.png",
+      "source_sha256": "6bc63b71c1b51cada9c179f6bc91f6a253c2892f2881db4b5fa5477d38a0f165",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map01-point2-magenta.png",
+      "image_sha256": "29ce8a07e288fece7992291aee304a22290392e7f766020ef48853a1816e4702"
+    },
+    {
+      "id": "map01-point3-magenta",
+      "point_id": "map01-point3",
+      "condition": "magenta",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "x": 231,
+      "y": 135,
+      "answer": "2",
+      "swatches": [
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          0,
+          164
+        ],
+        [
+          1,
+          1,
+          14
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          191,
+          0,
+          0
+        ],
+        [
+          248,
+          245,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        164
+      ],
+      "source_image": "images/map01-point3.png",
+      "source_sha256": "f0383c1b38c9ffd888f41174b04111cbe48765689ac0df5d3e5e1f7bddac1034",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map01-point3-magenta.png",
+      "image_sha256": "2809d982d95fd39f075386775fde31a48abc7faa3baecfa085f9b30210188cb5"
+    },
+    {
+      "id": "map01-point3-red",
+      "point_id": "map01-point3",
+      "condition": "red",
+      "split": "development",
+      "map_id": "5258ff05e902962ceb10",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/GlobalCarbon/GlobalCarbon.html",
+      "x": 231,
+      "y": 135,
+      "answer": "2",
+      "swatches": [
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          0,
+          164
+        ],
+        [
+          1,
+          1,
+          14
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          191,
+          0,
+          0
+        ],
+        [
+          248,
+          245,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        164
+      ],
+      "source_image": "images/map01-point3.png",
+      "source_sha256": "f0383c1b38c9ffd888f41174b04111cbe48765689ac0df5d3e5e1f7bddac1034",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map01-point3-red.png",
+      "image_sha256": "f0383c1b38c9ffd888f41174b04111cbe48765689ac0df5d3e5e1f7bddac1034"
+    },
+    {
+      "id": "map02-point0-red",
+      "point_id": "map02-point0",
+      "condition": "red",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "x": 582,
+      "y": 237,
+      "answer": "4",
+      "swatches": [
+        [
+          173,
+          179,
+          187
+        ],
+        [
+          24,
+          101,
+          172
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          219,
+          233,
+          246
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          81,
+          156,
+          204
+        ]
+      ],
+      "reference_rgb": [
+        219,
+        233,
+        246
+      ],
+      "source_image": "images/map02-point0.png",
+      "source_sha256": "693e599993d387de3dbefea137bd3e0387bf607832c6fe0f1cd070f91ac70561",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map02-point0-red.png",
+      "image_sha256": "693e599993d387de3dbefea137bd3e0387bf607832c6fe0f1cd070f91ac70561"
+    },
+    {
+      "id": "map02-point0-magenta",
+      "point_id": "map02-point0",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "x": 582,
+      "y": 237,
+      "answer": "4",
+      "swatches": [
+        [
+          173,
+          179,
+          187
+        ],
+        [
+          24,
+          101,
+          172
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          219,
+          233,
+          246
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          81,
+          156,
+          204
+        ]
+      ],
+      "reference_rgb": [
+        219,
+        233,
+        246
+      ],
+      "source_image": "images/map02-point0.png",
+      "source_sha256": "693e599993d387de3dbefea137bd3e0387bf607832c6fe0f1cd070f91ac70561",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map02-point0-magenta.png",
+      "image_sha256": "f815a9ad6d479ce9118d01a0d4269696855ffe5f1feeb91fe223f85a1629e360"
+    },
+    {
+      "id": "map02-point1-magenta",
+      "point_id": "map02-point1",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "x": 453,
+      "y": 70,
+      "answer": "1",
+      "swatches": [
+        [
+          216,
+          231,
+          245
+        ],
+        [
+          164,
+          172,
+          180
+        ],
+        [
+          23,
+          100,
+          171
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          79,
+          155,
+          203
+        ]
+      ],
+      "reference_rgb": [
+        216,
+        231,
+        245
+      ],
+      "source_image": "images/map02-point1.png",
+      "source_sha256": "5dc681c97844acbdbd4230493fb600887593db201ddae6492a1d0174471e9353",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map02-point1-magenta.png",
+      "image_sha256": "8963dbca1b686b6abd9f5e08ff92d9a04bb1a7d7132e9317379684d017b7b612"
+    },
+    {
+      "id": "map02-point1-red",
+      "point_id": "map02-point1",
+      "condition": "red",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "x": 453,
+      "y": 70,
+      "answer": "1",
+      "swatches": [
+        [
+          216,
+          231,
+          245
+        ],
+        [
+          164,
+          172,
+          180
+        ],
+        [
+          23,
+          100,
+          171
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          79,
+          155,
+          203
+        ]
+      ],
+      "reference_rgb": [
+        216,
+        231,
+        245
+      ],
+      "source_image": "images/map02-point1.png",
+      "source_sha256": "5dc681c97844acbdbd4230493fb600887593db201ddae6492a1d0174471e9353",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map02-point1-red.png",
+      "image_sha256": "5dc681c97844acbdbd4230493fb600887593db201ddae6492a1d0174471e9353"
+    },
+    {
+      "id": "map02-point2-red",
+      "point_id": "map02-point2",
+      "condition": "red",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "x": 465,
+      "y": 311,
+      "answer": "3",
+      "swatches": [
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          95,
+          166,
+          209
+        ],
+        [
+          245,
+          249,
+          254
+        ],
+        [
+          29,
+          108,
+          177
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          184,
+          194,
+          203
+        ]
+      ],
+      "reference_rgb": [
+        245,
+        249,
+        254
+      ],
+      "source_image": "images/map02-point2.png",
+      "source_sha256": "67dc4053b38b1ffab7cc1c5e735978057481d91245da8c686ab4df4027cc0645",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map02-point2-red.png",
+      "image_sha256": "67dc4053b38b1ffab7cc1c5e735978057481d91245da8c686ab4df4027cc0645"
+    },
+    {
+      "id": "map02-point2-magenta",
+      "point_id": "map02-point2",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "x": 465,
+      "y": 311,
+      "answer": "3",
+      "swatches": [
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          95,
+          166,
+          209
+        ],
+        [
+          245,
+          249,
+          254
+        ],
+        [
+          29,
+          108,
+          177
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          184,
+          194,
+          203
+        ]
+      ],
+      "reference_rgb": [
+        245,
+        249,
+        254
+      ],
+      "source_image": "images/map02-point2.png",
+      "source_sha256": "67dc4053b38b1ffab7cc1c5e735978057481d91245da8c686ab4df4027cc0645",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map02-point2-magenta.png",
+      "image_sha256": "c71f9e65221e9d5263590ea99de3b6394c35b467fe8dded01bcfa4bbb3be67f5"
+    },
+    {
+      "id": "map02-point3-magenta",
+      "point_id": "map02-point3",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "x": 203,
+      "y": 70,
+      "answer": "6",
+      "swatches": [
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          173,
+          179,
+          187
+        ],
+        [
+          81,
+          156,
+          204
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          24,
+          101,
+          172
+        ],
+        [
+          217,
+          232,
+          245
+        ]
+      ],
+      "reference_rgb": [
+        217,
+        232,
+        245
+      ],
+      "source_image": "images/map02-point3.png",
+      "source_sha256": "1443fbcbaeb61557471e9fa905524e85971393598457f81929fe624014ac1dd8",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map02-point3-magenta.png",
+      "image_sha256": "53ac6a51d7c33c670ba9aeffd181a3bd2ba57f2c7050d888820cc9a971de98ab"
+    },
+    {
+      "id": "map02-point3-red",
+      "point_id": "map02-point3",
+      "condition": "red",
+      "split": "test",
+      "map_id": "ac25c6f1570ac9b3f93b",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/Evapotranspiration/MOD16A2/MOD16A2.html",
+      "x": 203,
+      "y": 70,
+      "answer": "6",
+      "swatches": [
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          173,
+          179,
+          187
+        ],
+        [
+          81,
+          156,
+          204
+        ],
+        [
+          103,
+          108,
+          112
+        ],
+        [
+          24,
+          101,
+          172
+        ],
+        [
+          217,
+          232,
+          245
+        ]
+      ],
+      "reference_rgb": [
+        217,
+        232,
+        245
+      ],
+      "source_image": "images/map02-point3.png",
+      "source_sha256": "1443fbcbaeb61557471e9fa905524e85971393598457f81929fe624014ac1dd8",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map02-point3-red.png",
+      "image_sha256": "1443fbcbaeb61557471e9fa905524e85971393598457f81929fe624014ac1dd8"
+    },
+    {
+      "id": "map03-point0-red",
+      "point_id": "map03-point0",
+      "condition": "red",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "x": 526,
+      "y": 147,
+      "answer": "4",
+      "swatches": [
+        [
+          23,
+          123,
+          96
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          206,
+          255,
+          41
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          255,
+          104,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        206,
+        255,
+        41
+      ],
+      "source_image": "images/map03-point0.png",
+      "source_sha256": "a81f7b4f7e8714a89aedebe97fdadcb46bad1ec14404a59011a13a3a87ff1003",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map03-point0-red.png",
+      "image_sha256": "a81f7b4f7e8714a89aedebe97fdadcb46bad1ec14404a59011a13a3a87ff1003"
+    },
+    {
+      "id": "map03-point0-magenta",
+      "point_id": "map03-point0",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "x": 526,
+      "y": 147,
+      "answer": "4",
+      "swatches": [
+        [
+          23,
+          123,
+          96
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          206,
+          255,
+          41
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          255,
+          104,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        206,
+        255,
+        41
+      ],
+      "source_image": "images/map03-point0.png",
+      "source_sha256": "a81f7b4f7e8714a89aedebe97fdadcb46bad1ec14404a59011a13a3a87ff1003",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map03-point0-magenta.png",
+      "image_sha256": "d9835f0ff2fe567fcb9b17ec50a647bf5619cf758ba886f2520b3ae00c9bb98a"
+    },
+    {
+      "id": "map03-point1-magenta",
+      "point_id": "map03-point1",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "x": 344,
+      "y": 58,
+      "answer": "5",
+      "swatches": [
+        [
+          0,
+          11,
+          14
+        ],
+        [
+          0,
+          117,
+          150
+        ],
+        [
+          254,
+          237,
+          0
+        ],
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          83,
+          255,
+          164
+        ],
+        [
+          0,
+          0,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        83,
+        255,
+        164
+      ],
+      "source_image": "images/map03-point1.png",
+      "source_sha256": "1d2857a48b1aa6ce9318adb7cdb84cb06b8f55bb536e17886747b4b9b51023a7",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map03-point1-magenta.png",
+      "image_sha256": "0c780f9f7bf5a480228b3472c8ee3954c488a334f3cb29e82af7e5d7ceb6b97f"
+    },
+    {
+      "id": "map03-point1-red",
+      "point_id": "map03-point1",
+      "condition": "red",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "x": 344,
+      "y": 58,
+      "answer": "5",
+      "swatches": [
+        [
+          0,
+          11,
+          14
+        ],
+        [
+          0,
+          117,
+          150
+        ],
+        [
+          254,
+          237,
+          0
+        ],
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          83,
+          255,
+          164
+        ],
+        [
+          0,
+          0,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        83,
+        255,
+        164
+      ],
+      "source_image": "images/map03-point1.png",
+      "source_sha256": "1d2857a48b1aa6ce9318adb7cdb84cb06b8f55bb536e17886747b4b9b51023a7",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map03-point1-red.png",
+      "image_sha256": "1d2857a48b1aa6ce9318adb7cdb84cb06b8f55bb536e17886747b4b9b51023a7"
+    },
+    {
+      "id": "map03-point2-red",
+      "point_id": "map03-point2",
+      "condition": "red",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "x": 530,
+      "y": 319,
+      "answer": "2",
+      "swatches": [
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          190,
+          255,
+          57
+        ],
+        [
+          255,
+          111,
+          0
+        ],
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          23,
+          123,
+          96
+        ],
+        [
+          15,
+          249,
+          231
+        ]
+      ],
+      "reference_rgb": [
+        190,
+        255,
+        57
+      ],
+      "source_image": "images/map03-point2.png",
+      "source_sha256": "9bd4d4ee169f88b84fcd2f8a674500e0ae49007564056402dfaea98566a6b943",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map03-point2-red.png",
+      "image_sha256": "9bd4d4ee169f88b84fcd2f8a674500e0ae49007564056402dfaea98566a6b943"
+    },
+    {
+      "id": "map03-point2-magenta",
+      "point_id": "map03-point2",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "x": 530,
+      "y": 319,
+      "answer": "2",
+      "swatches": [
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          190,
+          255,
+          57
+        ],
+        [
+          255,
+          111,
+          0
+        ],
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          23,
+          123,
+          96
+        ],
+        [
+          15,
+          249,
+          231
+        ]
+      ],
+      "reference_rgb": [
+        190,
+        255,
+        57
+      ],
+      "source_image": "images/map03-point2.png",
+      "source_sha256": "9bd4d4ee169f88b84fcd2f8a674500e0ae49007564056402dfaea98566a6b943",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map03-point2-magenta.png",
+      "image_sha256": "daaeef8be18ef10a9e101f345e92f8ef75c6cf0c79ae520727204845108b3a06"
+    },
+    {
+      "id": "map03-point3-magenta",
+      "point_id": "map03-point3",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "x": 433,
+      "y": 213,
+      "answer": "4",
+      "swatches": [
+        [
+          0,
+          33,
+          255
+        ],
+        [
+          0,
+          0,
+          71
+        ],
+        [
+          28,
+          150,
+          117
+        ],
+        [
+          255,
+          93,
+          0
+        ],
+        [
+          0,
+          221,
+          254
+        ],
+        [
+          148,
+          255,
+          99
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        93,
+        0
+      ],
+      "source_image": "images/map03-point3.png",
+      "source_sha256": "57eee38669cc2e7a96e5207f3cb26f2ccaa235756aeea3e2d0d283a2a608bdb2",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map03-point3-magenta.png",
+      "image_sha256": "d05dbc31869e73f240de4d866c4fc383b8f3ade205eeb5b3844172041390e2f5"
+    },
+    {
+      "id": "map03-point3-red",
+      "point_id": "map03-point3",
+      "condition": "red",
+      "split": "test",
+      "map_id": "2eb6c49d98373c77ec46",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardSWRadiation/GEWEX.SRB/GEWEX.SRB.html",
+      "x": 433,
+      "y": 213,
+      "answer": "4",
+      "swatches": [
+        [
+          0,
+          33,
+          255
+        ],
+        [
+          0,
+          0,
+          71
+        ],
+        [
+          28,
+          150,
+          117
+        ],
+        [
+          255,
+          93,
+          0
+        ],
+        [
+          0,
+          221,
+          254
+        ],
+        [
+          148,
+          255,
+          99
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        93,
+        0
+      ],
+      "source_image": "images/map03-point3.png",
+      "source_sha256": "57eee38669cc2e7a96e5207f3cb26f2ccaa235756aeea3e2d0d283a2a608bdb2",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map03-point3-red.png",
+      "image_sha256": "57eee38669cc2e7a96e5207f3cb26f2ccaa235756aeea3e2d0d283a2a608bdb2"
+    },
+    {
+      "id": "map04-point0-red",
+      "point_id": "map04-point0",
+      "condition": "red",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "x": 534,
+      "y": 319,
+      "answer": "5",
+      "swatches": [
+        [
+          255,
+          159,
+          0
+        ],
+        [
+          0,
+          28,
+          57
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          177,
+          255,
+          70
+        ],
+        [
+          0,
+          197,
+          255
+        ],
+        [
+          0,
+          0,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        197,
+        255
+      ],
+      "source_image": "images/map04-point0.png",
+      "source_sha256": "68129048241c228f97aaf199e13f9f01d6014c84252208c546affffb60e13335",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map04-point0-red.png",
+      "image_sha256": "68129048241c228f97aaf199e13f9f01d6014c84252208c546affffb60e13335"
+    },
+    {
+      "id": "map04-point0-magenta",
+      "point_id": "map04-point0",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "x": 534,
+      "y": 319,
+      "answer": "5",
+      "swatches": [
+        [
+          255,
+          159,
+          0
+        ],
+        [
+          0,
+          28,
+          57
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          177,
+          255,
+          70
+        ],
+        [
+          0,
+          197,
+          255
+        ],
+        [
+          0,
+          0,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        197,
+        255
+      ],
+      "source_image": "images/map04-point0.png",
+      "source_sha256": "68129048241c228f97aaf199e13f9f01d6014c84252208c546affffb60e13335",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map04-point0-magenta.png",
+      "image_sha256": "0d97b48d73391067b58a16eeb61634c67762e2b0bdc5d544b60b8355f9bb7473"
+    },
+    {
+      "id": "map04-point1-magenta",
+      "point_id": "map04-point1",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "x": 429,
+      "y": 213,
+      "answer": "2",
+      "swatches": [
+        [
+          255,
+          104,
+          0
+        ],
+        [
+          209,
+          255,
+          38
+        ],
+        [
+          10,
+          108,
+          94
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          25,
+          255,
+          222
+        ],
+        [
+          128,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        209,
+        255,
+        38
+      ],
+      "source_image": "images/map04-point1.png",
+      "source_sha256": "5afa8899c92d20dad1b148fc9581ab8401095debf72c0c22c74057d6f632f2f2",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map04-point1-magenta.png",
+      "image_sha256": "f610cfce88ee1a13395039dbe76eacf56293a41cdeb1621fcd680033b6a72851"
+    },
+    {
+      "id": "map04-point1-red",
+      "point_id": "map04-point1",
+      "condition": "red",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "x": 429,
+      "y": 213,
+      "answer": "2",
+      "swatches": [
+        [
+          255,
+          104,
+          0
+        ],
+        [
+          209,
+          255,
+          38
+        ],
+        [
+          10,
+          108,
+          94
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          25,
+          255,
+          222
+        ],
+        [
+          128,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        209,
+        255,
+        38
+      ],
+      "source_image": "images/map04-point1.png",
+      "source_sha256": "5afa8899c92d20dad1b148fc9581ab8401095debf72c0c22c74057d6f632f2f2",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map04-point1-red.png",
+      "image_sha256": "5afa8899c92d20dad1b148fc9581ab8401095debf72c0c22c74057d6f632f2f2"
+    },
+    {
+      "id": "map04-point2-red",
+      "point_id": "map04-point2",
+      "condition": "red",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "x": 558,
+      "y": 143,
+      "answer": "6",
+      "swatches": [
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          255,
+          226,
+          0
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          0,
+          165,
+          255
+        ],
+        [
+          1,
+          15,
+          22
+        ],
+        [
+          93,
+          255,
+          154
+        ]
+      ],
+      "reference_rgb": [
+        93,
+        255,
+        154
+      ],
+      "source_image": "images/map04-point2.png",
+      "source_sha256": "e1514d53e0119b19b26a382264d5cc4df1170dabde772d968d5568ea001a0fee",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map04-point2-red.png",
+      "image_sha256": "e1514d53e0119b19b26a382264d5cc4df1170dabde772d968d5568ea001a0fee"
+    },
+    {
+      "id": "map04-point2-magenta",
+      "point_id": "map04-point2",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "x": 558,
+      "y": 143,
+      "answer": "6",
+      "swatches": [
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          255,
+          226,
+          0
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          0,
+          165,
+          255
+        ],
+        [
+          1,
+          15,
+          22
+        ],
+        [
+          93,
+          255,
+          154
+        ]
+      ],
+      "reference_rgb": [
+        93,
+        255,
+        154
+      ],
+      "source_image": "images/map04-point2.png",
+      "source_sha256": "e1514d53e0119b19b26a382264d5cc4df1170dabde772d968d5568ea001a0fee",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map04-point2-magenta.png",
+      "image_sha256": "4a4ce051a7d2eb80f4c80e507a200242432b8ea376780579f89239f84673728e"
+    },
+    {
+      "id": "map04-point3-magenta",
+      "point_id": "map04-point3",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "x": 348,
+      "y": 66,
+      "answer": "5",
+      "swatches": [
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          26,
+          70
+        ],
+        [
+          190,
+          255,
+          57
+        ],
+        [
+          255,
+          152,
+          0
+        ],
+        [
+          12,
+          245,
+          235
+        ],
+        [
+          0,
+          57,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        12,
+        245,
+        235
+      ],
+      "source_image": "images/map04-point3.png",
+      "source_sha256": "62557a36ef5c0d88459251fe7d1060c7c0173fb31478aade5d662bca4b268745",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map04-point3-magenta.png",
+      "image_sha256": "938e569812ebe1eaa78b286fef28adabfcccba28aec850fc10ed4dc244942178"
+    },
+    {
+      "id": "map04-point3-red",
+      "point_id": "map04-point3",
+      "condition": "red",
+      "split": "test",
+      "map_id": "9340f83d554e60c854b3",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/DiurnalTemperatureRange/CRU4.02/CRU4.02.html",
+      "x": 348,
+      "y": 66,
+      "answer": "5",
+      "swatches": [
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          26,
+          70
+        ],
+        [
+          190,
+          255,
+          57
+        ],
+        [
+          255,
+          152,
+          0
+        ],
+        [
+          12,
+          245,
+          235
+        ],
+        [
+          0,
+          57,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        12,
+        245,
+        235
+      ],
+      "source_image": "images/map04-point3.png",
+      "source_sha256": "62557a36ef5c0d88459251fe7d1060c7c0173fb31478aade5d662bca4b268745",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map04-point3-red.png",
+      "image_sha256": "62557a36ef5c0d88459251fe7d1060c7c0173fb31478aade5d662bca4b268745"
+    },
+    {
+      "id": "map05-point0-red",
+      "point_id": "map05-point0",
+      "condition": "red",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 276,
+      "y": 74,
+      "answer": "1",
+      "swatches": [
+        [
+          77,
+          255,
+          170
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          251,
+          241,
+          0
+        ],
+        [
+          79,
+          137,
+          53
+        ],
+        [
+          0,
+          0,
+          9
+        ]
+      ],
+      "reference_rgb": [
+        77,
+        255,
+        170
+      ],
+      "source_image": "images/map05-point0.png",
+      "source_sha256": "ff94f6e9fc5b2756d170ab0d4781eb0422de7c295d93d63b37ce69db60d3bbf8",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map05-point0-red.png",
+      "image_sha256": "ff94f6e9fc5b2756d170ab0d4781eb0422de7c295d93d63b37ce69db60d3bbf8"
+    },
+    {
+      "id": "map05-point0-magenta",
+      "point_id": "map05-point0",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 276,
+      "y": 74,
+      "answer": "1",
+      "swatches": [
+        [
+          77,
+          255,
+          170
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          251,
+          241,
+          0
+        ],
+        [
+          79,
+          137,
+          53
+        ],
+        [
+          0,
+          0,
+          9
+        ]
+      ],
+      "reference_rgb": [
+        77,
+        255,
+        170
+      ],
+      "source_image": "images/map05-point0.png",
+      "source_sha256": "ff94f6e9fc5b2756d170ab0d4781eb0422de7c295d93d63b37ce69db60d3bbf8",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map05-point0-magenta.png",
+      "image_sha256": "0c9c706b7d4a369894cb60a0ea405130d28d04370ad7c78bba57c862bbdb1f26"
+    },
+    {
+      "id": "map05-point1-magenta",
+      "point_id": "map05-point1",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 231,
+      "y": 327,
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          149,
+          255
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          0,
+          200
+        ],
+        [
+          0,
+          0,
+          42
+        ],
+        [
+          40,
+          139,
+          95
+        ],
+        [
+          167,
+          255,
+          80
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        149,
+        255
+      ],
+      "source_image": "images/map05-point1.png",
+      "source_sha256": "07402373db00890783680c54f431fb59e80a1ec6234e15b192c83096e68e7291",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map05-point1-magenta.png",
+      "image_sha256": "d6cc4383157f6bffcbcab212a90bbdccfbc2b4623477f0d84d1765472863460c"
+    },
+    {
+      "id": "map05-point1-red",
+      "point_id": "map05-point1",
+      "condition": "red",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 231,
+      "y": 327,
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          149,
+          255
+        ],
+        [
+          255,
+          19,
+          0
+        ],
+        [
+          0,
+          0,
+          200
+        ],
+        [
+          0,
+          0,
+          42
+        ],
+        [
+          40,
+          139,
+          95
+        ],
+        [
+          167,
+          255,
+          80
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        149,
+        255
+      ],
+      "source_image": "images/map05-point1.png",
+      "source_sha256": "07402373db00890783680c54f431fb59e80a1ec6234e15b192c83096e68e7291",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map05-point1-red.png",
+      "image_sha256": "07402373db00890783680c54f431fb59e80a1ec6234e15b192c83096e68e7291"
+    },
+    {
+      "id": "map05-point2-red",
+      "point_id": "map05-point2",
+      "condition": "red",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 643,
+      "y": 257,
+      "answer": "4",
+      "swatches": [
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          64,
+          255,
+          183
+        ],
+        [
+          255,
+          182,
+          0
+        ],
+        [
+          29,
+          23,
+          6
+        ],
+        [
+          0,
+          125,
+          150
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        182,
+        0
+      ],
+      "source_image": "images/map05-point2.png",
+      "source_sha256": "f1edbefaac96f9c66137b023d710978ac538e6067c20af9dd12c692be4e581d0",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map05-point2-red.png",
+      "image_sha256": "f1edbefaac96f9c66137b023d710978ac538e6067c20af9dd12c692be4e581d0"
+    },
+    {
+      "id": "map05-point2-magenta",
+      "point_id": "map05-point2",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 643,
+      "y": 257,
+      "answer": "4",
+      "swatches": [
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          64,
+          255,
+          183
+        ],
+        [
+          255,
+          182,
+          0
+        ],
+        [
+          29,
+          23,
+          6
+        ],
+        [
+          0,
+          125,
+          150
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        182,
+        0
+      ],
+      "source_image": "images/map05-point2.png",
+      "source_sha256": "f1edbefaac96f9c66137b023d710978ac538e6067c20af9dd12c692be4e581d0",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map05-point2-magenta.png",
+      "image_sha256": "cf73de37edec7e92f054a25e61a357ad62174adb0d78859855fb15bbe6921c35"
+    },
+    {
+      "id": "map05-point3-magenta",
+      "point_id": "map05-point3",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 292,
+      "y": 229,
+      "answer": "3",
+      "swatches": [
+        [
+          42,
+          156,
+          108
+        ],
+        [
+          0,
+          229,
+          248
+        ],
+        [
+          246,
+          11,
+          0
+        ],
+        [
+          0,
+          61,
+          255
+        ],
+        [
+          0,
+          0,
+          101
+        ],
+        [
+          183,
+          255,
+          64
+        ]
+      ],
+      "reference_rgb": [
+        246,
+        11,
+        0
+      ],
+      "source_image": "images/map05-point3.png",
+      "source_sha256": "5c13e5dba76a47d24ce0301caa132e89c2819272e7a5ac34f4e92e492f73695b",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map05-point3-magenta.png",
+      "image_sha256": "068030845897c8721b85309d2b12d26965879e6d7016afacfe9f568a0d9ca94f"
+    },
+    {
+      "id": "map05-point3-red",
+      "point_id": "map05-point3",
+      "condition": "red",
+      "split": "test",
+      "map_id": "7af8529e95a2ee568f1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceDownwardLWRadiation/CERESed4.1/CERESed4.1.html",
+      "x": 292,
+      "y": 229,
+      "answer": "3",
+      "swatches": [
+        [
+          42,
+          156,
+          108
+        ],
+        [
+          0,
+          229,
+          248
+        ],
+        [
+          246,
+          11,
+          0
+        ],
+        [
+          0,
+          61,
+          255
+        ],
+        [
+          0,
+          0,
+          101
+        ],
+        [
+          183,
+          255,
+          64
+        ]
+      ],
+      "reference_rgb": [
+        246,
+        11,
+        0
+      ],
+      "source_image": "images/map05-point3.png",
+      "source_sha256": "5c13e5dba76a47d24ce0301caa132e89c2819272e7a5ac34f4e92e492f73695b",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map05-point3-red.png",
+      "image_sha256": "5c13e5dba76a47d24ce0301caa132e89c2819272e7a5ac34f4e92e492f73695b"
+    },
+    {
+      "id": "map06-point0-red",
+      "point_id": "map06-point0",
+      "condition": "red",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "x": 542,
+      "y": 151,
+      "answer": "5",
+      "swatches": [
+        [
+          67,
+          255,
+          180
+        ],
+        [
+          205,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          31,
+          40,
+          15
+        ],
+        [
+          255,
+          167,
+          0
+        ],
+        [
+          0,
+          148,
+          254
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        167,
+        0
+      ],
+      "source_image": "images/map06-point0.png",
+      "source_sha256": "74ce89963df63475785c60821cc5ea607ca2f9ed9182368664b63452b56ccf72",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map06-point0-red.png",
+      "image_sha256": "74ce89963df63475785c60821cc5ea607ca2f9ed9182368664b63452b56ccf72"
+    },
+    {
+      "id": "map06-point0-magenta",
+      "point_id": "map06-point0",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "x": 542,
+      "y": 151,
+      "answer": "5",
+      "swatches": [
+        [
+          67,
+          255,
+          180
+        ],
+        [
+          205,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          31,
+          40,
+          15
+        ],
+        [
+          255,
+          167,
+          0
+        ],
+        [
+          0,
+          148,
+          254
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        167,
+        0
+      ],
+      "source_image": "images/map06-point0.png",
+      "source_sha256": "74ce89963df63475785c60821cc5ea607ca2f9ed9182368664b63452b56ccf72",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map06-point0-magenta.png",
+      "image_sha256": "290a12d1828e8ba246cf1f7abcc7aae10dec6f6282155a94d82f00773cd5e58c"
+    },
+    {
+      "id": "map06-point1-magenta",
+      "point_id": "map06-point1",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "x": 401,
+      "y": 139,
+      "answer": "2",
+      "swatches": [
+        [
+          0,
+          0,
+          96
+        ],
+        [
+          255,
+          26,
+          0
+        ],
+        [
+          0,
+          57,
+          255
+        ],
+        [
+          84,
+          76,
+          3
+        ],
+        [
+          177,
+          255,
+          70
+        ],
+        [
+          0,
+          229,
+          248
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        26,
+        0
+      ],
+      "source_image": "images/map06-point1.png",
+      "source_sha256": "1dc7881aa1c98195401f948ba1bfcdd59f026846307acd172a5eab0065dfeef8",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map06-point1-magenta.png",
+      "image_sha256": "ec32237a6da1dfe9cbb8664234378d84e89a2cfb2ab2115929e5859536192c82"
+    },
+    {
+      "id": "map06-point1-red",
+      "point_id": "map06-point1",
+      "condition": "red",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "x": 401,
+      "y": 139,
+      "answer": "2",
+      "swatches": [
+        [
+          0,
+          0,
+          96
+        ],
+        [
+          255,
+          26,
+          0
+        ],
+        [
+          0,
+          57,
+          255
+        ],
+        [
+          84,
+          76,
+          3
+        ],
+        [
+          177,
+          255,
+          70
+        ],
+        [
+          0,
+          229,
+          248
+        ]
+      ],
+      "reference_rgb": [
+        255,
+        26,
+        0
+      ],
+      "source_image": "images/map06-point1.png",
+      "source_sha256": "1dc7881aa1c98195401f948ba1bfcdd59f026846307acd172a5eab0065dfeef8",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map06-point1-red.png",
+      "image_sha256": "1dc7881aa1c98195401f948ba1bfcdd59f026846307acd172a5eab0065dfeef8"
+    },
+    {
+      "id": "map06-point2-red",
+      "point_id": "map06-point2",
+      "condition": "red",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "x": 413,
+      "y": 221,
+      "answer": "1",
+      "swatches": [
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          197
+        ],
+        [
+          238,
+          255,
+          9
+        ],
+        [
+          46,
+          137,
+          86
+        ],
+        [
+          255,
+          96,
+          0
+        ],
+        [
+          0,
+          229,
+          248
+        ]
+      ],
+      "reference_rgb": [
+        128,
+        0,
+        0
+      ],
+      "source_image": "images/map06-point2.png",
+      "source_sha256": "6ab0553fc93b82bc92916bbb4605f641f213f64ee1b1d8131794bd9a6f382181",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map06-point2-red.png",
+      "image_sha256": "6ab0553fc93b82bc92916bbb4605f641f213f64ee1b1d8131794bd9a6f382181"
+    },
+    {
+      "id": "map06-point2-magenta",
+      "point_id": "map06-point2",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "x": 413,
+      "y": 221,
+      "answer": "1",
+      "swatches": [
+        [
+          128,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          197
+        ],
+        [
+          238,
+          255,
+          9
+        ],
+        [
+          46,
+          137,
+          86
+        ],
+        [
+          255,
+          96,
+          0
+        ],
+        [
+          0,
+          229,
+          248
+        ]
+      ],
+      "reference_rgb": [
+        128,
+        0,
+        0
+      ],
+      "source_image": "images/map06-point2.png",
+      "source_sha256": "6ab0553fc93b82bc92916bbb4605f641f213f64ee1b1d8131794bd9a6f382181",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map06-point2-magenta.png",
+      "image_sha256": "097272182ca1df529eba378a6da45dafa0ad37ee25e818b21518b680adf8e808"
+    },
+    {
+      "id": "map06-point3-magenta",
+      "point_id": "map06-point3",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "x": 272,
+      "y": 115,
+      "answer": "4",
+      "swatches": [
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          255,
+          182,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          205,
+          255
+        ],
+        [
+          0,
+          1,
+          11
+        ]
+      ],
+      "reference_rgb": [
+        135,
+        255,
+        112
+      ],
+      "source_image": "images/map06-point3.png",
+      "source_sha256": "3af53da955eb6d265ed7be098c45f91072574f39fd1171b9c0b455a6807f9a8c",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map06-point3-magenta.png",
+      "image_sha256": "68d7aa817b887c86d5e3f3031913e94cfc8980560f195ae3d40fb1cbf292d384"
+    },
+    {
+      "id": "map06-point3-red",
+      "point_id": "map06-point3",
+      "condition": "red",
+      "split": "test",
+      "map_id": "8b8219d1b92dbd59dd1e",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/HydrologyCycle/SensibleHeat/WECANN/WECANN.html",
+      "x": 272,
+      "y": 115,
+      "answer": "4",
+      "swatches": [
+        [
+          0,
+          0,
+          255
+        ],
+        [
+          232,
+          0,
+          0
+        ],
+        [
+          255,
+          182,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          205,
+          255
+        ],
+        [
+          0,
+          1,
+          11
+        ]
+      ],
+      "reference_rgb": [
+        135,
+        255,
+        112
+      ],
+      "source_image": "images/map06-point3.png",
+      "source_sha256": "3af53da955eb6d265ed7be098c45f91072574f39fd1171b9c0b455a6807f9a8c",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map06-point3-red.png",
+      "image_sha256": "3af53da955eb6d265ed7be098c45f91072574f39fd1171b9c0b455a6807f9a8c"
+    },
+    {
+      "id": "map07-point0-red",
+      "point_id": "map07-point0",
+      "condition": "red",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "x": 457,
+      "y": 327,
+      "answer": "5",
+      "swatches": [
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          29,
+          108,
+          177
+        ],
+        [
+          171,
+          208,
+          230
+        ],
+        [
+          95,
+          166,
+          209
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          2,
+          7,
+          12
+        ]
+      ],
+      "reference_rgb": [
+        8,
+        48,
+        107
+      ],
+      "source_image": "images/map07-point0.png",
+      "source_sha256": "ec3c378acd5e54f6db78f17a64e910d66efbfe744fedc8a137cf33d7c50cd645",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map07-point0-red.png",
+      "image_sha256": "ec3c378acd5e54f6db78f17a64e910d66efbfe744fedc8a137cf33d7c50cd645"
+    },
+    {
+      "id": "map07-point0-magenta",
+      "point_id": "map07-point0",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "x": 457,
+      "y": 327,
+      "answer": "5",
+      "swatches": [
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          29,
+          108,
+          177
+        ],
+        [
+          171,
+          208,
+          230
+        ],
+        [
+          95,
+          166,
+          209
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          2,
+          7,
+          12
+        ]
+      ],
+      "reference_rgb": [
+        8,
+        48,
+        107
+      ],
+      "source_image": "images/map07-point0.png",
+      "source_sha256": "ec3c378acd5e54f6db78f17a64e910d66efbfe744fedc8a137cf33d7c50cd645",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map07-point0-magenta.png",
+      "image_sha256": "68f4cbe0ee937b9ab5145c188805a0a38636fdbd6095e5c5a344980b43f69626"
+    },
+    {
+      "id": "map07-point1-magenta",
+      "point_id": "map07-point1",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "x": 546,
+      "y": 74,
+      "answer": "2",
+      "swatches": [
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          24,
+          101,
+          172
+        ],
+        [
+          2,
+          7,
+          12
+        ],
+        [
+          127,
+          185,
+          218
+        ],
+        [
+          69,
+          148,
+          199
+        ],
+        [
+          12,
+          53,
+          92
+        ]
+      ],
+      "reference_rgb": [
+        24,
+        101,
+        172
+      ],
+      "source_image": "images/map07-point1.png",
+      "source_sha256": "9713a7500e70ff3744f78b3ce1edf8e93a7bdbada77e304abfe9290a082a3862",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map07-point1-magenta.png",
+      "image_sha256": "6e1a835a71f77bb3b024a92dcdd7014ea27966ff5fbfe2d6e2332867f174a67f"
+    },
+    {
+      "id": "map07-point1-red",
+      "point_id": "map07-point1",
+      "condition": "red",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "x": 546,
+      "y": 74,
+      "answer": "2",
+      "swatches": [
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          24,
+          101,
+          172
+        ],
+        [
+          2,
+          7,
+          12
+        ],
+        [
+          127,
+          185,
+          218
+        ],
+        [
+          69,
+          148,
+          199
+        ],
+        [
+          12,
+          53,
+          92
+        ]
+      ],
+      "reference_rgb": [
+        24,
+        101,
+        172
+      ],
+      "source_image": "images/map07-point1.png",
+      "source_sha256": "9713a7500e70ff3744f78b3ce1edf8e93a7bdbada77e304abfe9290a082a3862",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map07-point1-red.png",
+      "image_sha256": "9713a7500e70ff3744f78b3ce1edf8e93a7bdbada77e304abfe9290a082a3862"
+    },
+    {
+      "id": "map07-point2-red",
+      "point_id": "map07-point2",
+      "condition": "red",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "x": 203,
+      "y": 70,
+      "answer": "5",
+      "swatches": [
+        [
+          5,
+          47,
+          94
+        ],
+        [
+          66,
+          146,
+          198
+        ],
+        [
+          2,
+          7,
+          12
+        ],
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          21,
+          98,
+          169
+        ],
+        [
+          125,
+          184,
+          218
+        ]
+      ],
+      "reference_rgb": [
+        21,
+        98,
+        169
+      ],
+      "source_image": "images/map07-point2.png",
+      "source_sha256": "8c489dad8d8c7f25af6b0d5a47790b355b7788464600418d8f5535a9c99cd5b6",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map07-point2-red.png",
+      "image_sha256": "8c489dad8d8c7f25af6b0d5a47790b355b7788464600418d8f5535a9c99cd5b6"
+    },
+    {
+      "id": "map07-point2-magenta",
+      "point_id": "map07-point2",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "x": 203,
+      "y": 70,
+      "answer": "5",
+      "swatches": [
+        [
+          5,
+          47,
+          94
+        ],
+        [
+          66,
+          146,
+          198
+        ],
+        [
+          2,
+          7,
+          12
+        ],
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          21,
+          98,
+          169
+        ],
+        [
+          125,
+          184,
+          218
+        ]
+      ],
+      "reference_rgb": [
+        21,
+        98,
+        169
+      ],
+      "source_image": "images/map07-point2.png",
+      "source_sha256": "8c489dad8d8c7f25af6b0d5a47790b355b7788464600418d8f5535a9c99cd5b6",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map07-point2-magenta.png",
+      "image_sha256": "5a99e22608dbb022fd3deec1705a8139fa655b88630b1f5c91e5992457d8e4de"
+    },
+    {
+      "id": "map07-point3-magenta",
+      "point_id": "map07-point3",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "x": 223,
+      "y": 323,
+      "answer": "6",
+      "swatches": [
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          2,
+          7,
+          12
+        ],
+        [
+          45,
+          125,
+          187
+        ],
+        [
+          108,
+          174,
+          214
+        ],
+        [
+          179,
+          211,
+          232
+        ],
+        [
+          8,
+          69,
+          138
+        ]
+      ],
+      "reference_rgb": [
+        8,
+        69,
+        138
+      ],
+      "source_image": "images/map07-point3.png",
+      "source_sha256": "924c85e78e38c8e84bc6c5f21b60aa72ef7a43947f944d4a3e87f38d102576b7",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map07-point3-magenta.png",
+      "image_sha256": "e011b039cd995ea7921c94440ce8020e706bdc4532bc588c378b5e60668083e6"
+    },
+    {
+      "id": "map07-point3-red",
+      "point_id": "map07-point3",
+      "condition": "red",
+      "split": "test",
+      "map_id": "f828c198d96499081492",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/SurfaceRelativeHumidity/CRU4.02/CRU4.02.html",
+      "x": 223,
+      "y": 323,
+      "answer": "6",
+      "swatches": [
+        [
+          246,
+          250,
+          255
+        ],
+        [
+          2,
+          7,
+          12
+        ],
+        [
+          45,
+          125,
+          187
+        ],
+        [
+          108,
+          174,
+          214
+        ],
+        [
+          179,
+          211,
+          232
+        ],
+        [
+          8,
+          69,
+          138
+        ]
+      ],
+      "reference_rgb": [
+        8,
+        69,
+        138
+      ],
+      "source_image": "images/map07-point3.png",
+      "source_sha256": "924c85e78e38c8e84bc6c5f21b60aa72ef7a43947f944d4a3e87f38d102576b7",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map07-point3-red.png",
+      "image_sha256": "924c85e78e38c8e84bc6c5f21b60aa72ef7a43947f944d4a3e87f38d102576b7"
+    },
+    {
+      "id": "map08-point0-red",
+      "point_id": "map08-point0",
+      "condition": "red",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "x": 594,
+      "y": 237,
+      "answer": "6",
+      "swatches": [
+        [
+          0,
+          100,
+          255
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          209,
+          0,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          0,
+          137
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        137
+      ],
+      "source_image": "images/map08-point0.png",
+      "source_sha256": "3db91ab864715c39600c66c84dadb28bd3babbdd55d43cd79691db2bc783bb44",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map08-point0-red.png",
+      "image_sha256": "3db91ab864715c39600c66c84dadb28bd3babbdd55d43cd79691db2bc783bb44"
+    },
+    {
+      "id": "map08-point0-magenta",
+      "point_id": "map08-point0",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "x": 594,
+      "y": 237,
+      "answer": "6",
+      "swatches": [
+        [
+          0,
+          100,
+          255
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          209,
+          0,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          0,
+          137
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        137
+      ],
+      "source_image": "images/map08-point0.png",
+      "source_sha256": "3db91ab864715c39600c66c84dadb28bd3babbdd55d43cd79691db2bc783bb44",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map08-point0-magenta.png",
+      "image_sha256": "343784e400478e93aeff0159478718cc03ff7067d207ae7296e2af1603496381"
+    },
+    {
+      "id": "map08-point1-magenta",
+      "point_id": "map08-point1",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "x": 477,
+      "y": 62,
+      "answer": "2",
+      "swatches": [
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          128
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          97,
+          255
+        ],
+        [
+          22,
+          255,
+          225
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        128
+      ],
+      "source_image": "images/map08-point1.png",
+      "source_sha256": "f7e58483f09778f86b99283e0015e327c30def6e37d0cf46816f66bd8676abf5",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map08-point1-magenta.png",
+      "image_sha256": "a15efac2a6e57fd5137cb62f68ab4bfc5a282f940a69440e4514ce24b37088de"
+    },
+    {
+      "id": "map08-point1-red",
+      "point_id": "map08-point1",
+      "condition": "red",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "x": 477,
+      "y": 62,
+      "answer": "2",
+      "swatches": [
+        [
+          214,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          128
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          0,
+          97,
+          255
+        ],
+        [
+          22,
+          255,
+          225
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        128
+      ],
+      "source_image": "images/map08-point1.png",
+      "source_sha256": "f7e58483f09778f86b99283e0015e327c30def6e37d0cf46816f66bd8676abf5",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map08-point1-red.png",
+      "image_sha256": "f7e58483f09778f86b99283e0015e327c30def6e37d0cf46816f66bd8676abf5"
+    },
+    {
+      "id": "map08-point2-red",
+      "point_id": "map08-point2",
+      "condition": "red",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "x": 296,
+      "y": 229,
+      "answer": "3",
+      "swatches": [
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          0,
+          0,
+          146
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          205,
+          0,
+          0
+        ],
+        [
+          0,
+          105,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        146
+      ],
+      "source_image": "images/map08-point2.png",
+      "source_sha256": "2c4a7f6ae4522a1bc367596cb4700c836dd5d3b57504016d0cffb0b2c83cce32",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map08-point2-red.png",
+      "image_sha256": "2c4a7f6ae4522a1bc367596cb4700c836dd5d3b57504016d0cffb0b2c83cce32"
+    },
+    {
+      "id": "map08-point2-magenta",
+      "point_id": "map08-point2",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "x": 296,
+      "y": 229,
+      "answer": "3",
+      "swatches": [
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          0,
+          0,
+          146
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          205,
+          0,
+          0
+        ],
+        [
+          0,
+          105,
+          255
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        146
+      ],
+      "source_image": "images/map08-point2.png",
+      "source_sha256": "2c4a7f6ae4522a1bc367596cb4700c836dd5d3b57504016d0cffb0b2c83cce32",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map08-point2-magenta.png",
+      "image_sha256": "3a9dd08c7bd7d07e217f87f84f40d0acd22c7d3c9bf9be2988732c42bb5a6742"
+    },
+    {
+      "id": "map08-point3-magenta",
+      "point_id": "map08-point3",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "x": 401,
+      "y": 163,
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          0,
+          132
+        ],
+        [
+          0,
+          100,
+          255
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          214,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        132
+      ],
+      "source_image": "images/map08-point3.png",
+      "source_sha256": "9bf91e545007e067ebb4bdf883271989fd41bddd976631936b33d6fac348ac0e",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map08-point3-magenta.png",
+      "image_sha256": "0a596d11c41cbffcb970073cf4aecb635821bd242e686b7889b2ed89f9e34ca8"
+    },
+    {
+      "id": "map08-point3-red",
+      "point_id": "map08-point3",
+      "condition": "red",
+      "split": "test",
+      "map_id": "93addac79d51c6c4a569",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/EcosystemandCarbonCycle/Biomass/Tropical/Tropical.html",
+      "x": 401,
+      "y": 163,
+      "answer": "1",
+      "swatches": [
+        [
+          0,
+          0,
+          132
+        ],
+        [
+          0,
+          100,
+          255
+        ],
+        [
+          22,
+          255,
+          225
+        ],
+        [
+          248,
+          245,
+          0
+        ],
+        [
+          135,
+          255,
+          112
+        ],
+        [
+          214,
+          0,
+          0
+        ]
+      ],
+      "reference_rgb": [
+        0,
+        0,
+        132
+      ],
+      "source_image": "images/map08-point3.png",
+      "source_sha256": "9bf91e545007e067ebb4bdf883271989fd41bddd976631936b33d6fac348ac0e",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map08-point3-red.png",
+      "image_sha256": "9bf91e545007e067ebb4bdf883271989fd41bddd976631936b33d6fac348ac0e"
+    },
+    {
+      "id": "map09-point0-red",
+      "point_id": "map09-point0",
+      "condition": "red",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "x": 288,
+      "y": 249,
+      "answer": "4",
+      "swatches": [
+        [
+          170,
+          175,
+          179
+        ],
+        [
+          23,
+          100,
+          171
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          214,
+          230,
+          244
+        ],
+        [
+          97,
+          103,
+          110
+        ],
+        [
+          79,
+          155,
+          203
+        ]
+      ],
+      "reference_rgb": [
+        214,
+        230,
+        244
+      ],
+      "source_image": "images/map09-point0.png",
+      "source_sha256": "81067919c0511dc5d41fe7a66e894e83e77f9882e68877af5b7ecc3ad6ebc32a",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map09-point0-red.png",
+      "image_sha256": "81067919c0511dc5d41fe7a66e894e83e77f9882e68877af5b7ecc3ad6ebc32a"
+    },
+    {
+      "id": "map09-point0-magenta",
+      "point_id": "map09-point0",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "x": 288,
+      "y": 249,
+      "answer": "4",
+      "swatches": [
+        [
+          170,
+          175,
+          179
+        ],
+        [
+          23,
+          100,
+          171
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          214,
+          230,
+          244
+        ],
+        [
+          97,
+          103,
+          110
+        ],
+        [
+          79,
+          155,
+          203
+        ]
+      ],
+      "reference_rgb": [
+        214,
+        230,
+        244
+      ],
+      "source_image": "images/map09-point0.png",
+      "source_sha256": "81067919c0511dc5d41fe7a66e894e83e77f9882e68877af5b7ecc3ad6ebc32a",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map09-point0-magenta.png",
+      "image_sha256": "78740020a33004c00c8165dc1372ecf801ce4fce9050b7b1951388cc251221f1"
+    },
+    {
+      "id": "map09-point1-magenta",
+      "point_id": "map09-point1",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "x": 227,
+      "y": 327,
+      "answer": "3",
+      "swatches": [
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          184,
+          190,
+          194
+        ],
+        [
+          240,
+          246,
+          253
+        ],
+        [
+          92,
+          164,
+          208
+        ],
+        [
+          28,
+          106,
+          176
+        ],
+        [
+          105,
+          112,
+          118
+        ]
+      ],
+      "reference_rgb": [
+        240,
+        246,
+        253
+      ],
+      "source_image": "images/map09-point1.png",
+      "source_sha256": "446d7c25435599a6c848ec936a3bc4dcdaeb7028f1c9ffc906a2eb46435518ee",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map09-point1-magenta.png",
+      "image_sha256": "eb62d40cfdead7ee09c926a38d6cf0b653438bc6179b0f090e2dbdd9bb08d7a1"
+    },
+    {
+      "id": "map09-point1-red",
+      "point_id": "map09-point1",
+      "condition": "red",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "x": 227,
+      "y": 327,
+      "answer": "3",
+      "swatches": [
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          184,
+          190,
+          194
+        ],
+        [
+          240,
+          246,
+          253
+        ],
+        [
+          92,
+          164,
+          208
+        ],
+        [
+          28,
+          106,
+          176
+        ],
+        [
+          105,
+          112,
+          118
+        ]
+      ],
+      "reference_rgb": [
+        240,
+        246,
+        253
+      ],
+      "source_image": "images/map09-point1.png",
+      "source_sha256": "446d7c25435599a6c848ec936a3bc4dcdaeb7028f1c9ffc906a2eb46435518ee",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map09-point1-red.png",
+      "image_sha256": "446d7c25435599a6c848ec936a3bc4dcdaeb7028f1c9ffc906a2eb46435518ee"
+    },
+    {
+      "id": "map09-point2-red",
+      "point_id": "map09-point2",
+      "condition": "red",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "x": 231,
+      "y": 119,
+      "answer": "6",
+      "swatches": [
+        [
+          77,
+          153,
+          202
+        ],
+        [
+          22,
+          99,
+          170
+        ],
+        [
+          165,
+          170,
+          175
+        ],
+        [
+          97,
+          103,
+          110
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          211,
+          228,
+          243
+        ]
+      ],
+      "reference_rgb": [
+        211,
+        228,
+        243
+      ],
+      "source_image": "images/map09-point2.png",
+      "source_sha256": "628bed9b0a2424e2e93a1acf262e56d3894ee82b4771fee8afe2604b2a9fb0d0",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map09-point2-red.png",
+      "image_sha256": "628bed9b0a2424e2e93a1acf262e56d3894ee82b4771fee8afe2604b2a9fb0d0"
+    },
+    {
+      "id": "map09-point2-magenta",
+      "point_id": "map09-point2",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "x": 231,
+      "y": 119,
+      "answer": "6",
+      "swatches": [
+        [
+          77,
+          153,
+          202
+        ],
+        [
+          22,
+          99,
+          170
+        ],
+        [
+          165,
+          170,
+          175
+        ],
+        [
+          97,
+          103,
+          110
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          211,
+          228,
+          243
+        ]
+      ],
+      "reference_rgb": [
+        211,
+        228,
+        243
+      ],
+      "source_image": "images/map09-point2.png",
+      "source_sha256": "628bed9b0a2424e2e93a1acf262e56d3894ee82b4771fee8afe2604b2a9fb0d0",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map09-point2-magenta.png",
+      "image_sha256": "6dbc648d1cbb6cd2fc2cd8b6d503be2f499aa4f8b088a5ead9c10dcefea4a503"
+    },
+    {
+      "id": "map09-point3-magenta",
+      "point_id": "map09-point3",
+      "condition": "magenta",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "x": 558,
+      "y": 311,
+      "answer": "4",
+      "swatches": [
+        [
+          97,
+          103,
+          110
+        ],
+        [
+          180,
+          187,
+          193
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          231,
+          241,
+          250
+        ],
+        [
+          26,
+          104,
+          174
+        ],
+        [
+          88,
+          161,
+          207
+        ]
+      ],
+      "reference_rgb": [
+        231,
+        241,
+        250
+      ],
+      "source_image": "images/map09-point3.png",
+      "source_sha256": "b3561a6b52fd8d17467831f011227fd6621d1489c7cee6a91ce6580c7a59c124",
+      "marker_rgb": [
+        255,
+        0,
+        255
+      ],
+      "changed_pixels": 108,
+      "image": "images/map09-point3-magenta.png",
+      "image_sha256": "4f5a76157374ff798569709bc93564641d845530cdf6e78b03d1fee9a9e4eb2b"
+    },
+    {
+      "id": "map09-point3-red",
+      "point_id": "map09-point3",
+      "condition": "red",
+      "split": "test",
+      "map_id": "3e2766ccf29155c40d0f",
+      "source_group": "https://www.ilamb.org/CMIP6/historical/Forcings/Precipitation/CMAPv1904/CMAPv1904.html",
+      "x": 558,
+      "y": 311,
+      "answer": "4",
+      "swatches": [
+        [
+          97,
+          103,
+          110
+        ],
+        [
+          180,
+          187,
+          193
+        ],
+        [
+          8,
+          48,
+          107
+        ],
+        [
+          231,
+          241,
+          250
+        ],
+        [
+          26,
+          104,
+          174
+        ],
+        [
+          88,
+          161,
+          207
+        ]
+      ],
+      "reference_rgb": [
+        231,
+        241,
+        250
+      ],
+      "source_image": "images/map09-point3.png",
+      "source_sha256": "b3561a6b52fd8d17467831f011227fd6621d1489c7cee6a91ce6580c7a59c124",
+      "marker_rgb": [
+        255,
+        0,
+        0
+      ],
+      "changed_pixels": 0,
+      "image": "images/map09-point3-red.png",
+      "image_sha256": "b3561a6b52fd8d17467831f011227fd6621d1489c7cee6a91ce6580c7a59c124"
+    }
+  ]
+}

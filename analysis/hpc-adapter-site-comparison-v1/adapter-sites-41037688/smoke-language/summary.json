@@ -1,0 +1,73 @@
+{
+  "adapter_site": "language",
+  "evaluated_split": "dev",
+  "source_groups": 1,
+  "conditions": {
+    "full": {
+      "base": {
+        "n": 1,
+        "correct": 0,
+        "valid": 1,
+        "accuracy": 0,
+        "per_source": {
+          "https://www.ilamb.org/CMIP6/historical/RadiationandEnergyCycle/SurfaceNetRadiation/CERESed4.1/CERESed4.1.html": {
+            "n": 1,
+            "correct": 0
+          }
+        }
+      },
+      "adapted": {
+        "n": 1,
+        "correct": 0,
+        "valid": 1,
+        "accuracy": 0,
+        "per_source": {
+          "https://www.ilamb.org/CMIP6/historical/RadiationandEnergyCycle/SurfaceNetRadiation/CERESed4.1/CERESed4.1.html": {
+            "n": 1,
+            "correct": 0
+          }
+        }
+      },
+      "paired": {
+        "wrong_to_correct": 0,
+        "correct_to_wrong": 0
+      }
+    },
+    "crop": {
+      "base": {
+        "n": 1,
+        "correct": 0,
+        "valid": 1,
+        "accuracy": 0,
+        "per_source": {
+          "https://www.ilamb.org/CMIP6/historical/RadiationandEnergyCycle/SurfaceNetRadiation/CERESed4.1/CERESed4.1.html": {
+            "n": 1,
+            "correct": 0
+          }
+        }
+      },
+      "adapted": {
+        "n": 1,
+        "correct": 0,
+        "valid": 1,
+        "accuracy": 0,
+        "per_source": {
+          "https://www.ilamb.org/CMIP6/historical/RadiationandEnergyCycle/SurfaceNetRadiation/CERESed4.1/CERESed4.1.html": {
+            "n": 1,
+            "correct": 0
+          }
+        }
+      },
+      "paired": {
+        "wrong_to_correct": 0,
+        "correct_to_wrong": 0
+      }
+    }
+  },
+  "notes": [
+    "One fixed-epoch seed; only three held-out source groups in full pilot, not independent per-point evidence.",
+    "Same images/prompts/resolution/generation for base and saved adapter. All original weights frozen; LoRA site recorded separately.",
+    "Test source groups excluded from training and recent diagnostics, but drawn from archived ILAMB images.",
+    "Six-choice color reading only; not numerical legend reading or geographic evaluation."
+  ]
+}

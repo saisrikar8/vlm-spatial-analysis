@@ -1,0 +1,119 @@
+{
+  "status": "inspected_no_inference",
+  "manifest_sha256": "57c66b443fb359d5d9705476657cffc434070984f510ce61672ff9f8dd407f83",
+  "script_sha256": "7e42ef660e3c33669ec9be68f3a9f0150dac10d6e9cdf3bdafabdd24d1376f32",
+  "helper_sha256": "ce1ff86491cf949c4ada33eeb46ddc2c0e8e936219aac7693cdffbaf2c11aec1",
+  "prompt_module_sha256": "eb01dbace89ec4ac48f1fc2a0b67575038c6e27ba8196b33a7e1cfa7b626bead",
+  "model": "Qwen/Qwen2.5-VL-7B-Instruct",
+  "revision": "cc594898137f460bfe9f0759e9844b3ce807cfb5",
+  "prompt": "Which numbered color swatch at the bottom best matches the target color in the upper part of the image? If a circular marker is present, the target is the underlying map color at its CENTER, not the marker outline or grid lines. Otherwise, the target is the large plain colored square. Return only one digit from 1 to 6. Do not read numerical map values or report the grid cell.",
+  "settings": {
+    "baseline": {
+      "min_pixels": 3136,
+      "max_pixels": 1003520
+    },
+    "high": {
+      "min_pixels": 2007040,
+      "max_pixels": 2007040
+    }
+  },
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 16
+  },
+  "seed": 20261106,
+  "job_id": null,
+  "python": "3.11.6 (main, Jun 25 2024, 17:53:21) [GCC 11.4.0]",
+  "packages": {
+    "torch": "2.14.1",
+    "transformers": "4.57.1",
+    "pillow": "12.3.0",
+    "accelerate": "1.15.0"
+  },
+  "processors": {
+    "baseline": {
+      "image_processor_class": "Qwen2VLImageProcessorFast",
+      "configuration": {
+        "_processor_class": "Qwen2_5_VLProcessor",
+        "size": {
+          "shortest_edge": 3136,
+          "longest_edge": 12845056
+        },
+        "min_pixels": 3136,
+        "max_pixels": 1003520,
+        "patch_size": 14,
+        "temporal_patch_size": 2,
+        "merge_size": 2,
+        "image_mean": [
+          0.48145466,
+          0.4578275,
+          0.40821073
+        ],
+        "image_std": [
+          0.26862954,
+          0.26130258,
+          0.27577711
+        ],
+        "image_processor_type": "Qwen2VLImageProcessorFast",
+        "crop_size": null,
+        "pad_size": null,
+        "do_resize": true,
+        "default_to_square": true,
+        "resample": 3,
+        "do_center_crop": null,
+        "do_rescale": true,
+        "rescale_factor": 0.00392156862745098,
+        "do_normalize": true,
+        "do_pad": null,
+        "do_convert_rgb": true,
+        "return_tensors": null,
+        "data_format": "channels_first",
+        "input_data_format": null,
+        "device": null,
+        "disable_grouping": null
+      }
+    },
+    "high": {
+      "image_processor_class": "Qwen2VLImageProcessorFast",
+      "configuration": {
+        "_processor_class": "Qwen2_5_VLProcessor",
+        "size": {
+          "shortest_edge": 3136,
+          "longest_edge": 12845056
+        },
+        "min_pixels": 2007040,
+        "max_pixels": 2007040,
+        "patch_size": 14,
+        "temporal_patch_size": 2,
+        "merge_size": 2,
+        "image_mean": [
+          0.48145466,
+          0.4578275,
+          0.40821073
+        ],
+        "image_std": [
+          0.26862954,
+          0.26130258,
+          0.27577711
+        ],
+        "image_processor_type": "Qwen2VLImageProcessorFast",
+        "crop_size": null,
+        "pad_size": null,
+        "do_resize": true,
+        "default_to_square": true,
+        "resample": 3,
+        "do_center_crop": null,
+        "do_rescale": true,
+        "rescale_factor": 0.00392156862745098,
+        "do_normalize": true,
+        "do_pad": null,
+        "do_convert_rgb": true,
+        "return_tensors": null,
+        "data_format": "channels_first",
+        "input_data_format": null,
+        "device": null,
+        "disable_grouping": null
+      }
+    }
+  }
+}

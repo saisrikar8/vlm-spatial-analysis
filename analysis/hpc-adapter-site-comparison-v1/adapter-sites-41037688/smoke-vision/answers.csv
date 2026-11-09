@@ -1,0 +1,5 @@
+id,point_id,source_group,condition,backend,reference,prediction,valid,correct,raw_response
+source06-point00-full,source06-point00,https://www.ilamb.org/CMIP6/historical/RadiationandEnergyCycle/SurfaceNetRadiation/CERESed4.1/CERESed4.1.html,full,base,5,3,True,False,3
+source06-point00-full,source06-point00,https://www.ilamb.org/CMIP6/historical/RadiationandEnergyCycle/SurfaceNetRadiation/CERESed4.1/CERESed4.1.html,full,adapted,5,3,True,False,3
+source06-point00-crop,source06-point00,https://www.ilamb.org/CMIP6/historical/RadiationandEnergyCycle/SurfaceNetRadiation/CERESed4.1/CERESed4.1.html,crop,base,5,2,True,False,2
+source06-point00-crop,source06-point00,https://www.ilamb.org/CMIP6/historical/RadiationandEnergyCycle/SurfaceNetRadiation/CERESed4.1/CERESed4.1.html,crop,adapted,5,2,True,False,2

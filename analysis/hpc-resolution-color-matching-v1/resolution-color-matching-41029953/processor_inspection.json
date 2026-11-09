@@ -1,0 +1,1442 @@
+[
+  {
+    "id": "map00-point0-baseline",
+    "point_id": "map00-point0",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map00-point0-high",
+    "point_id": "map00-point0",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map00-point1-high",
+    "point_id": "map00-point1",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map00-point1-baseline",
+    "point_id": "map00-point1",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map00-point2-baseline",
+    "point_id": "map00-point2",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map00-point2-high",
+    "point_id": "map00-point2",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map00-point3-high",
+    "point_id": "map00-point3",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map00-point3-baseline",
+    "point_id": "map00-point3",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map01-point0-baseline",
+    "point_id": "map01-point0",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map01-point0-high",
+    "point_id": "map01-point0",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map01-point1-high",
+    "point_id": "map01-point1",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map01-point1-baseline",
+    "point_id": "map01-point1",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map01-point2-baseline",
+    "point_id": "map01-point2",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map01-point2-high",
+    "point_id": "map01-point2",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map01-point3-high",
+    "point_id": "map01-point3",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map01-point3-baseline",
+    "point_id": "map01-point3",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map02-point0-baseline",
+    "point_id": "map02-point0",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map02-point0-high",
+    "point_id": "map02-point0",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map02-point1-high",
+    "point_id": "map02-point1",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map02-point1-baseline",
+    "point_id": "map02-point1",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map02-point2-baseline",
+    "point_id": "map02-point2",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map02-point2-high",
+    "point_id": "map02-point2",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map02-point3-high",
+    "point_id": "map02-point3",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map02-point3-baseline",
+    "point_id": "map02-point3",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map03-point0-baseline",
+    "point_id": "map03-point0",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map03-point0-high",
+    "point_id": "map03-point0",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map03-point1-high",
+    "point_id": "map03-point1",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map03-point1-baseline",
+    "point_id": "map03-point1",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map03-point2-baseline",
+    "point_id": "map03-point2",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map03-point2-high",
+    "point_id": "map03-point2",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map03-point3-high",
+    "point_id": "map03-point3",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map03-point3-baseline",
+    "point_id": "map03-point3",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map04-point0-baseline",
+    "point_id": "map04-point0",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map04-point0-high",
+    "point_id": "map04-point0",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map04-point1-high",
+    "point_id": "map04-point1",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map04-point1-baseline",
+    "point_id": "map04-point1",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map04-point2-baseline",
+    "point_id": "map04-point2",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map04-point2-high",
+    "point_id": "map04-point2",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map04-point3-high",
+    "point_id": "map04-point3",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map04-point3-baseline",
+    "point_id": "map04-point3",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map05-point0-baseline",
+    "point_id": "map05-point0",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map05-point0-high",
+    "point_id": "map05-point0",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map05-point1-high",
+    "point_id": "map05-point1",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map05-point1-baseline",
+    "point_id": "map05-point1",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map05-point2-baseline",
+    "point_id": "map05-point2",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map05-point2-high",
+    "point_id": "map05-point2",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map05-point3-high",
+    "point_id": "map05-point3",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map05-point3-baseline",
+    "point_id": "map05-point3",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map06-point0-baseline",
+    "point_id": "map06-point0",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map06-point0-high",
+    "point_id": "map06-point0",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map06-point1-high",
+    "point_id": "map06-point1",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map06-point1-baseline",
+    "point_id": "map06-point1",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map06-point2-baseline",
+    "point_id": "map06-point2",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map06-point2-high",
+    "point_id": "map06-point2",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map06-point3-high",
+    "point_id": "map06-point3",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map06-point3-baseline",
+    "point_id": "map06-point3",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map07-point0-baseline",
+    "point_id": "map07-point0",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map07-point0-high",
+    "point_id": "map07-point0",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map07-point1-high",
+    "point_id": "map07-point1",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map07-point1-baseline",
+    "point_id": "map07-point1",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map07-point2-baseline",
+    "point_id": "map07-point2",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map07-point2-high",
+    "point_id": "map07-point2",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map07-point3-high",
+    "point_id": "map07-point3",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map07-point3-baseline",
+    "point_id": "map07-point3",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map08-point0-baseline",
+    "point_id": "map08-point0",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map08-point0-high",
+    "point_id": "map08-point0",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map08-point1-high",
+    "point_id": "map08-point1",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map08-point1-baseline",
+    "point_id": "map08-point1",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map08-point2-baseline",
+    "point_id": "map08-point2",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map08-point2-high",
+    "point_id": "map08-point2",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map08-point3-high",
+    "point_id": "map08-point3",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map08-point3-baseline",
+    "point_id": "map08-point3",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map09-point0-baseline",
+    "point_id": "map09-point0",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map09-point0-high",
+    "point_id": "map09-point0",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map09-point1-high",
+    "point_id": "map09-point1",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map09-point1-baseline",
+    "point_id": "map09-point1",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map09-point2-baseline",
+    "point_id": "map09-point2",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  },
+  {
+    "id": "map09-point2-high",
+    "point_id": "map09-point2",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map09-point3-high",
+    "point_id": "map09-point3",
+    "condition": "high",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 1260,
+    "processed_width": 1624,
+    "image_grid_thw": [
+      1,
+      90,
+      116
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 2610,
+    "total_input_tokens": 2712
+  },
+  {
+    "id": "map09-point3-baseline",
+    "point_id": "map09-point3",
+    "condition": "baseline",
+    "source_width": 795,
+    "source_height": 625,
+    "processed_height": 616,
+    "processed_width": 784,
+    "image_grid_thw": [
+      1,
+      44,
+      56
+    ],
+    "patch_size": 14,
+    "merge_size": 2,
+    "visual_tokens": 616,
+    "total_input_tokens": 718
+  }
+]

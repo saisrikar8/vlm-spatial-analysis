@@ -1,0 +1,4 @@
+test,marker_color,test_points,valid,marker_color_option_available,marker_color_selected
+Original red,red,32,32,15,8
+Red (neutral prompt),red,32,32,15,4
+Magenta (neutral prompt),magenta,32,32,0,0

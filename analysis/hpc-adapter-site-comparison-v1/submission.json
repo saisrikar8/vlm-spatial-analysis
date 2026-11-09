@@ -1,0 +1,18 @@
+{
+  "status": "completed_verified_locally",
+  "sites": [
+    "language",
+    "vision",
+    "joint"
+  ],
+  "dataset_sha256": "fd887c1d01fd7a2d08c103e4a1c8587d739e0c6a5b8746a1e4d6066cea88013b",
+  "workflow": "one normal-queue A40 job: all smoke gates, then all full runs and summary",
+  "job_id": 41037688,
+  "snapshot": "/global/scratch/users/tummalasaisrikar/vlm-spatial-analysis/submissions/adapter-sites-dc6f0ae7f0f0",
+  "remote_output": "runs/adapter-sites-41037688",
+  "bundle_sha256": "dc6f0ae7f0f054f81024ada832b412228c0b06d29487117c9bc6b45164d8e205",
+  "trainer_sha256": "fa54a793d4194677252aa8223fe1b284a08507204665c8a11bfb78d4e3f88a5d",
+  "full_response_count": 576,
+  "smoke_response_count": 12,
+  "baseline_disagreements": 0
+}

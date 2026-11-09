@@ -1,0 +1,18 @@
+{
+  "status": "smoke_and_full_completed_verified_locally",
+  "smoke_job": 41030910,
+  "full_job": 41030911,
+  "full_dependency": "afterok:41030910 plus matching smoke metadata gate",
+  "snapshot": "/global/scratch/users/tummalasaisrikar/vlm-spatial-analysis/submissions/color-sft-b8f6958f27db",
+  "bundle_sha256": "b8f6958f27dbd302f162f333303bb093eb9d8fa68516c8f9546024ab811ea945",
+  "dataset_sha256": "fd887c1d01fd7a2d08c103e4a1c8587d739e0c6a5b8746a1e4d6066cea88013b",
+  "train_images": 288,
+  "dev_images": 32,
+  "test_images": 96,
+  "train_groups": 6,
+  "dev_groups": 2,
+  "test_groups": 3,
+  "response_count": 192,
+  "training_microsteps": 288,
+  "optimizer_updates": 72
+}
